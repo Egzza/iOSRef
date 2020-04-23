@@ -22,12 +22,27 @@ class ViewControllerPruebas: UIViewController {
     @IBOutlet weak var lbDatos: UILabel!
     @IBOutlet weak var lbPregunta: UILabel!
     
-    
+    // 4Options
+    @IBOutlet weak var view4Options: UIView!
     @IBOutlet weak var btOp1: UIButton!
     @IBOutlet weak var btOp2: UIButton!
     @IBOutlet weak var btOp3: UIButton!
     @IBOutlet weak var btOp4: UIButton!
     @IBOutlet weak var btOk: UIButton!
+    
+    
+    //TrueFalse
+    @IBOutlet weak var viewTrueFalse: UIView!
+    @IBOutlet weak var btnTrue: UIButton!
+    @IBOutlet weak var btnFalse: UIButton!
+    @IBOutlet weak var btnListoTF: UIButton!
+    
+    //OrderList
+    @IBOutlet weak var viewOrderList: UIView!
+    @IBOutlet weak var tvList: UITableView!
+    @IBOutlet weak var btnListoOL: UIButton!
+    
+    
     
     
     override func viewDidLoad() {
