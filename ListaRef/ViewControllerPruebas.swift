@@ -17,6 +17,7 @@ class ViewControllerPruebas: UIViewController {
     var editoriales = ["Ed1", "Editorial2", "Una Editorial"]
     
     var respuesta : String!
+    var respuestaE : String!
 
     @IBOutlet weak var lbDatos: UILabel!
     @IBOutlet weak var lbPregunta: UILabel!
@@ -48,27 +49,83 @@ class ViewControllerPruebas: UIViewController {
         lbPregunta.text = iE.creaPreguntaLibro()
         lbDatos.text = iE.refLibro.printReferencia()
         iE.creaOpciones()
+        respuestaE = iE.respuesta
         btOp1.setTitle(iE.op1, for: .normal)
         btOp2.setTitle(iE.op2, for: .normal)
         btOp3.setTitle(iE.op3, for: .normal)
         btOp4.setTitle(iE.op4, for: .normal)
+        btOp1.backgroundColor = UIColor.gray
+        btOp2.backgroundColor = UIColor.gray
+        btOp3.backgroundColor = UIColor.gray
+        btOp4.backgroundColor = UIColor.gray
     }
 
     @IBAction func btOp1(_ sender: UIButton) {
+        if let buttonTitle = sender.title(for: .normal) {
+          respuesta = buttonTitle
+        }
+        btOp1.backgroundColor = UIColor.green
+        btOp2.backgroundColor = UIColor.gray
+        btOp3.backgroundColor = UIColor.gray
+        btOp4.backgroundColor = UIColor.gray
     }
     
     @IBAction func btOp2(_ sender: UIButton) {
+        if let buttonTitle = sender.title(for: .normal) {
+          respuesta = buttonTitle
+        }
+        btOp1.backgroundColor = UIColor.gray
+        btOp2.backgroundColor = UIColor.green
+        btOp3.backgroundColor = UIColor.gray
+        btOp4.backgroundColor = UIColor.gray
+        
     }
     
     @IBAction func btOp3(_ sender: UIButton) {
+        if let buttonTitle = sender.title(for: .normal) {
+          respuesta = buttonTitle
+        }
+        btOp1.backgroundColor = UIColor.gray
+        btOp2.backgroundColor = UIColor.gray
+        btOp3.backgroundColor = UIColor.green
+        btOp4.backgroundColor = UIColor.gray
     }
     
     @IBAction func btOp4(_ sender: UIButton) {
+        if let buttonTitle = sender.title(for: .normal) {
+          respuesta = buttonTitle
+        }
+        btOp1.backgroundColor = UIColor.gray
+        btOp2.backgroundColor = UIColor.gray
+        btOp3.backgroundColor = UIColor.gray
+        btOp4.backgroundColor = UIColor.green
     }
     
     @IBAction func btOk(_ sender: UIButton) {
+        if checaRespuesta(r: respuesta){
+            let alerta = UIAlertController(title: "Correcto", message: "Respuesta Correcta", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alerta.addAction(accion)
+            present(alerta, animated: true, completion: nil)
+            print("Respuesta Correcta")
+            ini()
+        }else{
+            let alerta = UIAlertController(title: "Incorrecto", message: "Respuesta Correcta: " + respuesta, preferredStyle: .alert)
+            let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alerta.addAction(accion)
+            present(alerta, animated: true, completion: nil)
+            print("Respuesta Incorreta")
+            ini()
+        }
     }
     
+    func checaRespuesta(r: String) -> Bool{
+      if r == respuestaE{
+        return true
+      }else{
+        return false
+      }
+    }
     
     
     

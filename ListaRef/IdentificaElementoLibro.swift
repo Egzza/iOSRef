@@ -62,14 +62,5 @@ class IdentificaElementoLibro: NSObject {
       op4 = opciones[3]
     }
 
-    func checaRespuesta(r: String){
-      if r == respuesta{
-        print("respuesta correcta")
-      }else{
-        print("respuesta incorrecta")
-        print("respuesta esperada: " + respuesta)
-      }
-
-    }
 
 }
