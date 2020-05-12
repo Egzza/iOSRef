@@ -25,7 +25,7 @@ class ReferenciaDiccionario: Referencia{
 
     super.init(autor: autor, titulo: titulo)
 
-    partes = ["autor", "titulo", "aPublicacion", "ciudad", "editorial", "tituloDiccionario", "pagina"]
+    partes = ["Autor", "Titulo", "Fecha", "Ciudad", "Editorial", "Diccionario", "Pagina"]
     elementos = [autor, titulo, aPublicacion, ciudad, editorial, tituloDiccionario, pagina]
   }
 

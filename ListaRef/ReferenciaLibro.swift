@@ -21,7 +21,7 @@ class ReferenciaLibro: Referencia {
 
       super.init(autor: autor, titulo: titulo)
         
-        partes = ["autor", "titulo", "aPublicacion", "ciudadPais", "editorial"]
+        partes = ["Autor", "Titulo", "Fecha", "Ciudad y Pais", "Editorial"]
         elementos = [autor, titulo, aPublicacion, ciudadPais, editorial]
     }
 

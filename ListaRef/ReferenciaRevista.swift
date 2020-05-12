@@ -23,7 +23,7 @@ class ReferenciaRevista: Referencia{
 
     super.init(autor: autor, titulo: titulo)
 
-    partes = ["autor", "titulo", "aPublicacion", "tituloRevista", "numeroPublicacion", "paginas"]
+    partes = ["Autor", "Titulo", "Fecha", "Titulo de Revista", "Numero de Publicacion", "Paginas"]
     elementos = [autor, titulo, aPublicacion, tituloRevista, numeroPublicacion, paginas]
   }
 

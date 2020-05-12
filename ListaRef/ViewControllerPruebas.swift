@@ -64,7 +64,10 @@ class ViewControllerPruebas: UIViewController {
         let refD = ReferenciaDiccionario(autor: "Apellido, N.", titulo: "Titulo epigrefe", aPublicacion: "(año)", ciudad: "Ciudad", editorial: "Editorial", tituloDiccionario: "Dicciorario cursiva", pagina: "(Vol. n, p. n)")
         let refR = ReferenciaRevista(autor: "Apellido, N.", titulo: "Titulo del Articulo: Subtitulo", aPublicacion: "(año)", tituloRevista: "Titulo Revista", numeroPublicacion : "volumen cursiva(N)", paginas : "I-F")
         
-        let iE = IdentificaElemento(ref: refR)
+        var listaRef : [Referencia] = [refL, refCL, refD, refR]
+        listaRef.shuffle()
+        
+        let iE = IdentificaElemento(ref: listaRef[0])
         
         lbPregunta.text = iE.creaPregunta()
         lbDatos.text = iE.ref.printReferencia()
