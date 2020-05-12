@@ -61,10 +61,10 @@ class ViewControllerPruebas: UIViewController {
         */
         let refL = ReferenciaLibro(autor: "autor", titulo: "titulo", aPublicacion: "(año)", ciudadPais: "ciudad, pais", editorial: "editorial")
         let refCL = ReferenciaCapituloLibro(autor: "Apellido, N.", titulo: "Titulo Capitulo", aPublicacion: "(año)", ciudad: "Ciudad", editorial: "Editorial", editores : "N. Apellido (Ed./Cood.)", tituloLibro : "Titulo Libro en Cursiva", paginas : "(p. I-F)")
-        let refD = ReferenciaDiccionario(autor: "Apellido, N.", titulo: "titulo", aPublicacion: "(año)", ciudad: "Ciudad", editorial: "Editorial", tituloDiccionario: "Dicciorario", pagina: "(vol. pag.)")
-        let refR = ReferenciaRevista(autor: "autor", titulo: "titulo", aPublicacion: "(año)", tituloRevista: "Revista 1", numeroPublicacion : "NP", paginas : "pg-pg")
+        let refD = ReferenciaDiccionario(autor: "Apellido, N.", titulo: "Titulo epigrefe", aPublicacion: "(año)", ciudad: "Ciudad", editorial: "Editorial", tituloDiccionario: "Dicciorario cursiva", pagina: "(Vol. n, p. n)")
+        let refR = ReferenciaRevista(autor: "Apellido, N.", titulo: "Titulo del Articulo: Subtitulo", aPublicacion: "(año)", tituloRevista: "Titulo Revista", numeroPublicacion : "volumen cursiva(N)", paginas : "I-F")
         
-        let iE = IdentificaElemento(ref: refCL)
+        let iE = IdentificaElemento(ref: refR)
         
         lbPregunta.text = iE.creaPregunta()
         lbDatos.text = iE.ref.printReferencia()
