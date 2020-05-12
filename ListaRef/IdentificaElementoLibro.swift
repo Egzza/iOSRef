@@ -8,6 +8,8 @@
 
 import UIKit
 
+// OUTDATED//////////////////////////////////////////////
+
 class IdentificaElementoLibro: NSObject {
 
     var refLibro : ReferenciaLibro

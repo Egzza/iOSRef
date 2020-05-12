@@ -11,7 +11,9 @@ import UIKit
 class Referencia: NSObject {
     var autor : String
     var titulo : String
-
+    var partes : [String]!
+    var elementos : [String]!
+    
     init(autor: String, titulo: String){
       self.autor = autor
       self.titulo = titulo

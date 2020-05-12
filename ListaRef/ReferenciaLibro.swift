@@ -17,10 +17,12 @@ class ReferenciaLibro: Referencia {
     init(autor: String, titulo: String, aPublicacion: String, ciudadPais: String, editorial: String){
       self.aPublicacion = aPublicacion
       self.ciudadPais = ciudadPais
-      
       self.editorial = editorial
 
       super.init(autor: autor, titulo: titulo)
+        
+        partes = ["autor", "titulo", "aPublicacion", "ciudadPais", "editorial"]
+        elementos = [autor, titulo, aPublicacion, ciudadPais, editorial]
     }
 
     override func printReferencia() -> String{

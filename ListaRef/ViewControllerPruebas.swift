@@ -10,12 +10,13 @@ import UIKit
 
 class ViewControllerPruebas: UIViewController {
     
+    /*
     var autores = ["Villa, P.", "Juan, C.", "Persona, A"]
     var titulos = ["Titulo1", "Titulo2", "Titulo3"]
     var aPublicacion = ["(1999)", "(2000)", "(2001)"]
     var ciudadesPaises = ["Monterrey, Mexico", "Paris, Francia", "Ciudad1, Pais1"]
     var editoriales = ["Ed1", "Editorial2", "Una Editorial"]
-    
+    */
     var respuesta : String!
     var respuestaE : String!
 
@@ -51,24 +52,28 @@ class ViewControllerPruebas: UIViewController {
     }
     
     func ini(){
+        /*
         autores.shuffle()
         titulos.shuffle()
         aPublicacion.shuffle()
         ciudadesPaises.shuffle()
         editoriales.shuffle()
+        */
+        let refL = ReferenciaLibro(autor: "autor", titulo: "titulo", aPublicacion: "(año)", ciudadPais: "ciudad, pais", editorial: "editorial")
+        let refCL = ReferenciaCapituloLibro(autor: "Apellido, N.", titulo: "Titulo Capitulo", aPublicacion: "(año)", ciudad: "Ciudad", editorial: "Editorial", editores : "N. Apellido (Ed./Cood.)", tituloLibro : "Titulo Libro en Cursiva", paginas : "(p. I-F)")
+        let refD = ReferenciaDiccionario(autor: "Apellido, N.", titulo: "titulo", aPublicacion: "(año)", ciudad: "Ciudad", editorial: "Editorial", tituloDiccionario: "Dicciorario", pagina: "(vol. pag.)")
+        let refR = ReferenciaRevista(autor: "autor", titulo: "titulo", aPublicacion: "(año)", tituloRevista: "Revista 1", numeroPublicacion : "NP", paginas : "pg-pg")
         
-        let ref = ReferenciaLibro(autor: autores[0], titulo: titulos[0], aPublicacion: aPublicacion[0], ciudadPais: ciudadesPaises[0], editorial: editoriales[0])
+        let iE = IdentificaElemento(ref: refCL)
         
-        let iE = IdentificaElementoLibro(refLibro: ref)
-        
-        lbPregunta.text = iE.creaPreguntaLibro()
-        lbDatos.text = iE.refLibro.printReferencia()
+        lbPregunta.text = iE.creaPregunta()
+        lbDatos.text = iE.ref.printReferencia()
         iE.creaOpciones()
         respuestaE = iE.respuesta
-        btOp1.setTitle(iE.op1, for: .normal)
-        btOp2.setTitle(iE.op2, for: .normal)
-        btOp3.setTitle(iE.op3, for: .normal)
-        btOp4.setTitle(iE.op4, for: .normal)
+        btOp1.setTitle(iE.op[0], for: .normal)
+        btOp2.setTitle(iE.op[1], for: .normal)
+        btOp3.setTitle(iE.op[2], for: .normal)
+        btOp4.setTitle(iE.op[3], for: .normal)
         btOp1.backgroundColor = UIColor.gray
         btOp2.backgroundColor = UIColor.gray
         btOp3.backgroundColor = UIColor.gray
