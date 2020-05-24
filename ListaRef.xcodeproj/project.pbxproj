@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460822EC247ACFDC000E73A8 /* VerdaderoFalso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460822EB247ACFDC000E73A8 /* VerdaderoFalso.swift */; };
 		463177C9246B2D3C00170F6C /* IdentificaElemento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463177C8246B2D3C00170F6C /* IdentificaElemento.swift */; };
 		46E1B03924510C98009C95A6 /* Referencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1B03824510C98009C95A6 /* Referencia.swift */; };
 		DF8C704E2450B97200AF298F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C704D2450B97200AF298F /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		460822EB247ACFDC000E73A8 /* VerdaderoFalso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerdaderoFalso.swift; sourceTree = "<group>"; };
 		463177C8246B2D3C00170F6C /* IdentificaElemento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificaElemento.swift; sourceTree = "<group>"; };
 		46E1B03824510C98009C95A6 /* Referencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referencia.swift; sourceTree = "<group>"; };
 		DF8C704A2450B97100AF298F /* ListaRef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaRef.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,7 @@
 				DF8C70512450B97200AF298F /* ViewController.swift */,
 				DF8C70532450B97200AF298F /* Main.storyboard */,
 				463177C8246B2D3C00170F6C /* IdentificaElemento.swift */,
+				460822EB247ACFDC000E73A8 /* VerdaderoFalso.swift */,
 				DF8C70612450C79800AF298F /* ViewControllerQuiz.swift */,
 				DF8C70632450C7A800AF298F /* ViewControllerPruebas.swift */,
 				DF8C70652450C7B200AF298F /* ViewControllerGuia.swift */,
@@ -159,6 +162,7 @@
 				DF8C70502450B97200AF298F /* SceneDelegate.swift in Sources */,
 				463177C9246B2D3C00170F6C /* IdentificaElemento.swift in Sources */,
 				46E1B03924510C98009C95A6 /* Referencia.swift in Sources */,
+				460822EC247ACFDC000E73A8 /* VerdaderoFalso.swift in Sources */,
 				DF8C70662450C7B200AF298F /* ViewControllerGuia.swift in Sources */,
 				DF8C70622450C79800AF298F /* ViewControllerQuiz.swift in Sources */,
 			);

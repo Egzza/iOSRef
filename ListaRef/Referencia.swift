@@ -101,7 +101,7 @@ class Referencia: NSObject{
         let referencia = autor + " " + aPublicacion + " " + titulo + " " + url
         return referencia;
       default:
-        //print(tipo)
+        print("tipo de referencia incorrecto")
         return "error en printReferencia"
         
     }

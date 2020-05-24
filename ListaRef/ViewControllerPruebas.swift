@@ -38,12 +38,12 @@ class ViewControllerPruebas: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ini() // inicializa una pregunta de indntifica elemento opcion multiple
+        iniVF() // inicializa una pregunta de indntifica elemento opcion multiple
     }
     
     func ini(){
         
-        let ref = Referencia(tipo: "Referencia Red Social", autor: "NASA [@nasa].", aPublicacion: "(10 de abril de 2019).", fechaConsulta: "", titulo: "In a historic feat by the Event Horizon Telescope and National Science Foundation (@NSFgov), an image of a black hole [Imagen adjunta]. ", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "Instagram. https://www.instagram.com/p/BwFQEn0j7v1/", editores: "") // una referencia de prueba
+        let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
         
         var listaRef : [Referencia] = [ref]
         listaRef.shuffle()
@@ -64,6 +64,28 @@ class ViewControllerPruebas: UIViewController {
         btOp4.backgroundColor = UIColor.gray
     }
 
+    func iniVF(){
+        
+        let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
+        
+        var listaRef : [Referencia] = [ref]
+        listaRef.shuffle()
+        
+        let vF = VerdaderoFalso(ref: listaRef[0])
+        
+        lbPregunta.text = vF.creaPregunta()
+        lbDatos.text = vF.ref.printReferencia()
+        
+        respuestaE = vF.respuesta
+        btOp1.setTitle("Verdadero", for: .normal)
+        btOp2.setTitle("Falso", for: .normal)
+        
+        btOp1.backgroundColor = UIColor.gray
+        btOp2.backgroundColor = UIColor.gray
+        btOp3.backgroundColor = UIColor.gray
+        btOp4.backgroundColor = UIColor.gray
+    }
+    
     @IBAction func btOp1(_ sender: UIButton) {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
@@ -114,7 +136,7 @@ class ViewControllerPruebas: UIViewController {
             print("Respuesta Correcta")
             ini()
         }else{
-            let alerta = UIAlertController(title: "Incorrecto", message: "Respuesta Correcta: " + respuesta, preferredStyle: .alert)
+            let alerta = UIAlertController(title: "Incorrecto", message: "Respuesta Correcta: " + respuestaE, preferredStyle: .alert)
             let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alerta.addAction(accion)
             present(alerta, animated: true, completion: nil)
