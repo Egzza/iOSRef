@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// OUTDATED//////////////////////////////////////////////
 class ReferenciaDiccionario: Referencia{
   
   var tituloDiccionario : String

@@ -10,13 +10,6 @@ import UIKit
 
 class ViewControllerPruebas: UIViewController {
     
-    /*
-    var autores = ["Villa, P.", "Juan, C.", "Persona, A"]
-    var titulos = ["Titulo1", "Titulo2", "Titulo3"]
-    var aPublicacion = ["(1999)", "(2000)", "(2001)"]
-    var ciudadesPaises = ["Monterrey, Mexico", "Paris, Francia", "Ciudad1, Pais1"]
-    var editoriales = ["Ed1", "Editorial2", "Una Editorial"]
-    */
     var respuesta : String!
     var respuestaE : String!
 
@@ -43,28 +36,16 @@ class ViewControllerPruebas: UIViewController {
     @IBOutlet weak var tvList: UITableView!
     @IBOutlet weak var btnListoOL: UIButton!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ini()
+        ini() // inicializa una pregunta de indntifica elemento opcion multiple
     }
     
     func ini(){
-        /*
-        autores.shuffle()
-        titulos.shuffle()
-        aPublicacion.shuffle()
-        ciudadesPaises.shuffle()
-        editoriales.shuffle()
-        */
-        let refL = ReferenciaLibro(autor: "autor", titulo: "titulo", aPublicacion: "(año)", ciudadPais: "ciudad, pais", editorial: "editorial")
-        let refCL = ReferenciaCapituloLibro(autor: "Apellido, N.", titulo: "Titulo Capitulo", aPublicacion: "(año)", ciudad: "Ciudad", editorial: "Editorial", editores : "N. Apellido (Ed./Cood.)", tituloLibro : "Titulo Libro en Cursiva", paginas : "(p. I-F)")
-        let refD = ReferenciaDiccionario(autor: "Apellido, N.", titulo: "Titulo epigrefe", aPublicacion: "(año)", ciudad: "Ciudad", editorial: "Editorial", tituloDiccionario: "Dicciorario cursiva", pagina: "(Vol. n, p. n)")
-        let refR = ReferenciaRevista(autor: "Apellido, N.", titulo: "Titulo del Articulo: Subtitulo", aPublicacion: "(año)", tituloRevista: "Titulo Revista", numeroPublicacion : "volumen cursiva(N)", paginas : "I-F")
         
-        var listaRef : [Referencia] = [refL, refCL, refD, refR]
+        let ref = Referencia(tipo: "Referencia Red Social", autor: "NASA [@nasa].", aPublicacion: "(10 de abril de 2019).", fechaConsulta: "", titulo: "In a historic feat by the Event Horizon Telescope and National Science Foundation (@NSFgov), an image of a black hole [Imagen adjunta]. ", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "Instagram. https://www.instagram.com/p/BwFQEn0j7v1/", editores: "") // una referencia de prueba
+        
+        var listaRef : [Referencia] = [ref]
         listaRef.shuffle()
         
         let iE = IdentificaElemento(ref: listaRef[0])

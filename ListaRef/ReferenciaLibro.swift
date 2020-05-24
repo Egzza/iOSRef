@@ -8,6 +8,7 @@
 
 import UIKit
 
+// OUTDATED//////////////////////////////////////////////
 class ReferenciaLibro: Referencia {
 
     var aPublicacion : String

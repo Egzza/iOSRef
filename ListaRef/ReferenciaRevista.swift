@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// OUTDATED//////////////////////////////////////////////
 class ReferenciaRevista: Referencia{
   
   var aPublicacion : String

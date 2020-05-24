@@ -37,7 +37,7 @@ class IdentificaElemento: NSObject {
 
       opciones.shuffle()
       let random = Int.random(in: 0...3)
-      opciones[random] = respuesta
+        opciones.insert(respuesta, at: random)
       op.append(opciones[0])
       op.append(opciones[1])
       op.append(opciones[2])
