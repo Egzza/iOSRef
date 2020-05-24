@@ -45,6 +45,7 @@ class ViewControllerPruebas: UIViewController {
     }
     
     func iniIE(){
+        respuesta = ""
         view4Options.isHidden = false
         viewTrueFalse.isHidden = true
         let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
@@ -69,6 +70,7 @@ class ViewControllerPruebas: UIViewController {
     }
 
     func iniVF(){
+        respuesta = ""
         view4Options.isHidden = true
         viewTrueFalse.isHidden = false
         
@@ -131,20 +133,38 @@ class ViewControllerPruebas: UIViewController {
         btOp4.backgroundColor = UIColor.green
     }
     
+    @IBAction func btnTrue(_ sender: UIButton) {
+        if let buttonTitle = sender.title(for: .normal) {
+          respuesta = buttonTitle
+        }
+        btnTrue.backgroundColor = UIColor.green
+        btnFalse.backgroundColor = UIColor.gray
+    }
+    
+    @IBAction func btnFalse(_ sender: UIButton) {
+        if let buttonTitle = sender.title(for: .normal) {
+          respuesta = buttonTitle
+        }
+        btnTrue.backgroundColor = UIColor.gray
+        btnFalse.backgroundColor = UIColor.green
+    }
+    
+    
+    
     @IBAction func btOk(_ sender: UIButton) {
         if checaRespuesta(r: respuesta){
             let alerta = UIAlertController(title: "Correcto", message: "Respuesta Correcta", preferredStyle: .alert)
             let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alerta.addAction(accion)
             present(alerta, animated: true, completion: nil)
-            print("Respuesta Correcta")
+            print("Respuesta Correcta " + respuesta)
             ini()
         }else{
             let alerta = UIAlertController(title: "Incorrecto", message: "Respuesta Correcta: " + respuestaE, preferredStyle: .alert)
             let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alerta.addAction(accion)
             present(alerta, animated: true, completion: nil)
-            print("Respuesta Incorreta")
+            print("Respuesta Incorrecta " + respuesta)
             ini()
         }
     }

@@ -456,6 +456,7 @@
                                         </state>
                                         <connections>
                                             <action selector="btOp1:" destination="K1g-6a-9iz" eventType="touchUpInside" id="8XK-Zr-CEE"/>
+                                            <action selector="btnTrue:" destination="K1g-6a-9iz" eventType="touchUpInside" id="Vve-f1-Emb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWO-aV-rDQ">
@@ -468,6 +469,7 @@
                                         </state>
                                         <connections>
                                             <action selector="btOp3:" destination="K1g-6a-9iz" eventType="touchUpInside" id="eXM-dl-2vc"/>
+                                            <action selector="btnFalse:" destination="K1g-6a-9iz" eventType="touchUpInside" id="iOU-Xs-SNI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNC-S1-vJW">
@@ -564,7 +566,7 @@
                         <outlet property="btnFalse" destination="tWO-aV-rDQ" id="JNd-D8-uEn"/>
                         <outlet property="btnListoOL" destination="OoO-t4-gIM" id="h01-dI-kjl"/>
                         <outlet property="btnListoTF" destination="lNC-S1-vJW" id="RtN-SN-6od"/>
-                        <outlet property="btnTrue" destination="hd6-Ai-Fzj" id="Kta-zl-MKo"/>
+                        <outlet property="btnTrue" destination="hd6-Ai-Fzj" id="tPF-ee-6Hg"/>
                         <outlet property="lbDatos" destination="yoA-kq-t8S" id="Rze-rg-YGJ"/>
                         <outlet property="lbPregunta" destination="asd-dL-spS" id="xbj-A0-42i"/>
                         <outlet property="tvList" destination="Hm8-Mn-9Ks" id="Ntc-nn-FP0"/>
