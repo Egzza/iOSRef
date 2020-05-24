@@ -38,11 +38,15 @@ class ViewControllerPruebas: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        iniVF() // inicializa una pregunta de indntifica elemento opcion multiple
+        ini() // inicializa una pregunta de indntifica elemento opcion multiple
+    }
+    func ini(){
+        iniVF()
     }
     
-    func ini(){
-        
+    func iniIE(){
+        view4Options.isHidden = false
+        viewTrueFalse.isHidden = true
         let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
         
         var listaRef : [Referencia] = [ref]
@@ -65,6 +69,8 @@ class ViewControllerPruebas: UIViewController {
     }
 
     func iniVF(){
+        view4Options.isHidden = true
+        viewTrueFalse.isHidden = false
         
         let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
         
@@ -77,13 +83,11 @@ class ViewControllerPruebas: UIViewController {
         lbDatos.text = vF.ref.printReferencia()
         
         respuestaE = vF.respuesta
-        btOp1.setTitle("Verdadero", for: .normal)
-        btOp2.setTitle("Falso", for: .normal)
+        btnTrue.setTitle("Verdadero", for: .normal)
+        btnFalse.setTitle("Falso", for: .normal)
         
-        btOp1.backgroundColor = UIColor.gray
-        btOp2.backgroundColor = UIColor.gray
-        btOp3.backgroundColor = UIColor.gray
-        btOp4.backgroundColor = UIColor.gray
+        btnTrue.backgroundColor = UIColor.gray
+        btnFalse.backgroundColor = UIColor.gray
     }
     
     @IBAction func btOp1(_ sender: UIButton) {

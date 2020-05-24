@@ -484,7 +484,7 @@
                                     </button>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPL-dE-7kT" userLabel="4questions">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPL-dE-7kT" userLabel="4questions">
                                 <rect key="frame" x="19" y="202" width="341" height="380"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -575,7 +575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Lo-pz-1wc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3556" y="136.28185907046478"/>
+            <point key="canvasLocation" x="3586" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="baj-SE-aZZ">
