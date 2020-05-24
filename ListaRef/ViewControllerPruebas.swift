@@ -3,6 +3,7 @@
 //  ListaRef
 //
 //  Created by Eugenio on 4/22/20.
+//  Modified by Rogelio Martiez
 //  Copyright © 2020 Eugenio González. All rights reserved.
 //
 
@@ -41,9 +42,15 @@ class ViewControllerPruebas: UIViewController {
         ini() // inicializa una pregunta de indntifica elemento opcion multiple
     }
     func ini(){
-        iniVF()
+        var valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
+        if valor == 0{
+            iniVF()
+        }else {
+            iniIE()
+        }
     }
     
+    //fucion para inicializar identificar elemento
     func iniIE(){
         respuesta = ""
         view4Options.isHidden = false
@@ -68,7 +75,8 @@ class ViewControllerPruebas: UIViewController {
         btOp3.backgroundColor = UIColor.gray
         btOp4.backgroundColor = UIColor.gray
     }
-
+    
+    //funcion para inicializar verdadero o falso
     func iniVF(){
         respuesta = ""
         view4Options.isHidden = true
@@ -92,6 +100,7 @@ class ViewControllerPruebas: UIViewController {
         btnFalse.backgroundColor = UIColor.gray
     }
     
+    // botones de identificar elemento
     @IBAction func btOp1(_ sender: UIButton) {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
@@ -133,6 +142,7 @@ class ViewControllerPruebas: UIViewController {
         btOp4.backgroundColor = UIColor.green
     }
     
+    // botones de verdadero o falso
     @IBAction func btnTrue(_ sender: UIButton) {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
