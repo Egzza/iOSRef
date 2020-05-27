@@ -48,45 +48,45 @@ class Referencia: Codable{
     func crearElementos(){
         switch tipo {
              case "Libro":
-               partes = ["autor", "aPublicacion", "titulo", "edicion","ciudadPais", "editorial"]
+               partes = ["Autor", "Año De Publicacion", "Titulo", "Edicion","Ciudad/Pais", "Editorial"]
                elementos = [autor, aPublicacion,titulo, edicion, ciudadPais, editorial]
                
              case "Libro Electronico":
-               partes = ["autor", "titulo", "aPublicacion", "url"]
+               partes = ["Autor", "Titulo", "Año De Publicacion", "Url"]
                elementos = [autor, titulo, aPublicacion, url]
                
                
              case "Capitulo Libro":
-               partes = ["autor", "aPublicacion","titulo", "tituloMayor", "paginas", "ciudadPais", "editorial", "editores"]
+               partes = ["Autor", "Año De Publicacion","Titulo", "Titulo Mayor", "Paginas", "Ciudad/Pais", "Editorial", "Editores"]
                elementos = [autor, aPublicacion,  titulo, tituloMayor, paginas, ciudadPais, editorial, editores]
                
            case "Revista":
-               partes = ["autor", "aPublicacion", "titulo", "tituloMayor", "edicion", "paginas"]
+               partes = ["Autor", "Año De Publicacion", "Titulo", "Titulo Mayor", "Edicion", "Paginas"]
                elementos = [autor, aPublicacion, titulo, tituloMayor, edicion, paginas]
                
            case "Revista Electronica":
-               partes = ["autor", "aPublicacion","titulo", "tituloMayor", "edicion", "paginas", "url"]
+               partes = ["Autor", "Año De Publicacion","Titulo", "Titulo Mayor", "Edicion", "Paginas", "Url"]
                elementos = [autor, aPublicacion, titulo, tituloMayor, edicion, paginas, url]
            
            case "Articulo Internet":
-               partes = ["autor", "aPublicacion", "titulo", "url"]
+               partes = ["Autor", "Año De Publicacion", "Titulo", "Url"]
                elementos = [autor, aPublicacion, titulo, url]
                
            case "Articulo Periodico":
-               partes = ["autor", "titulo", "aPublicacion", "tituloMayor", "paginas"]
+               partes = ["Autor", "Titulo", "Año De Publicacion", "Titulo Mayor", "Paginas"]
                elementos = [autor, titulo, aPublicacion, tituloMayor, paginas]
            
                
            case "Video":
-               partes = ["autor", "aPublicacion", "titulo", "url"]
+               partes = ["Autor", "Año De Publicacion", "Titulo", "Url"]
                elementos = [autor, aPublicacion, titulo, url]
         
            case "Pagina Web":
-               partes = ["autor", "aPublicacion", "titulo", "url"]
+               partes = ["Autor", "Año De Publicacion", "Titulo", "Url"]
                elementos = [autor, aPublicacion, titulo, url]
 
            case "Red Social":
-               partes = ["autor", "aPublicacion", "titulo", "url"]
+               partes = ["Autor", "Año De Publicacion", "Titulo", "Url"]
                elementos = [autor, aPublicacion, titulo, url]
               
                
