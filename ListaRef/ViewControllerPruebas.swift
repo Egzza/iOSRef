@@ -147,6 +147,8 @@ class ViewControllerPruebas: UIViewController {
         refList.shuffle()
         refList[0].crearElementos()
         ord = Ordena(elementos: refList[0].elementos)
+        lbPregunta.text = "Ordena"
+        lbDatos.text = "Ordena correctamente los datos de la referencia"
         collectionV.dragInteractionEnabled = true
         collectionV.dragDelegate = self
         collectionV.dropDelegate = self
@@ -288,11 +290,15 @@ extension ViewControllerPruebas: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OrdenaCollectionViewCell
         // Agrega el label
+        cell.myLabel.adjustsFontSizeToFitWidth = true
+        cell.myLabel.numberOfLines = 2
         cell.myLabel.text = ord.unsolved[indexPath.item]
+        cell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
         return cell
     }
     
 }
+
 
 extension ViewControllerPruebas : UICollectionViewDelegateFlowLayout {
     
@@ -326,6 +332,7 @@ extension ViewControllerPruebas: UICollectionViewDragDelegate {
         let itemProvider = NSItemProvider(object: item as NSString)
         let dragItem = UIDragItem(itemProvider: itemProvider)
         dragItem.localObject = dragItem
+        //collectionView.cellForItem(at: indexPath)?.layer.borderWidth = 5
         return [dragItem]
     }
 }
@@ -333,6 +340,7 @@ extension ViewControllerPruebas: UICollectionViewDragDelegate {
 extension ViewControllerPruebas: UICollectionViewDropDelegate {
 
     func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+        
         if collectionView.hasActiveDrag {
             return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
         }
@@ -340,6 +348,10 @@ extension ViewControllerPruebas: UICollectionViewDropDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+        
+        //collectionView.cellForItem(at: (coordinator.items.first?.sourceIndexPath)!)?.layer.borderWidth = 0
+        
+        //collectionView.cellForItem(at: (coordinator.destinationIndexPath)!)?.layer.borderWidth = 0
         
         var destinationIndexPath: IndexPath
         if let indexPath = coordinator.destinationIndexPath {

@@ -12,7 +12,7 @@ class ViewControllerEscogePreuba: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Escoge Pruebas"
         // Do any additional setup after loading the view.
     }
     
