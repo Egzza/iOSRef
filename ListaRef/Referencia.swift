@@ -48,7 +48,7 @@ class Referencia: NSObject{
         elementos = [autor, aPublicacion,titulo, edicion, ciudadPais, editorial]
         
       case "Libro Electronico":
-        partes = ["autor", "aPublicacion", "titulo", "url"]
+        partes = ["autor", "titulo", "aPublicacion", "url"]
         elementos = [autor, titulo, aPublicacion, url]
         
         
@@ -69,7 +69,7 @@ class Referencia: NSObject{
         elementos = [autor, aPublicacion, titulo, url]
         
     case "Articulo Periodico":
-        partes = ["autor", "aPublicacion", "titulo", "tituloMayor", "paginas"]
+        partes = ["autor", "titulo", "aPublicacion", "tituloMayor", "paginas"]
         elementos = [autor, titulo, aPublicacion, tituloMayor, paginas]
     
         

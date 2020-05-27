@@ -60,7 +60,7 @@ class ViewControllerPruebas: UIViewController {
 
     }
     func ini(){
-        var valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
+        let valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
         if valor == 0{
             iniVF()
         }else{
@@ -74,7 +74,7 @@ class ViewControllerPruebas: UIViewController {
         view4Options.isHidden = false
         viewTrueFalse.isHidden = true
         collectionV.isHidden = true
-        let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
+        let ref = Referencia(tipo: "Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
         
         var listaRef : [Referencia] = [ref]
         listaRef.shuffle()
@@ -101,7 +101,7 @@ class ViewControllerPruebas: UIViewController {
         view4Options.isHidden = true
         viewTrueFalse.isHidden = false
         collectionV.isHidden = true
-        let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
+        let ref = Referencia(tipo: "Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
         
         var listaRef : [Referencia] = [ref]
         listaRef.shuffle()
