@@ -27,7 +27,7 @@ class ViewControllerGuia: UIViewController {
         pdfView.autoScales = true
         
         // Load Sample.pdf file from app bundle.
-        let fileURL = Bundle.main.url(forResource: "altres_a2016_guia_elaborar_citas", withExtension: "pdf")
+        let fileURL = Bundle.main.url(forResource: "APA_referenciasparafrasis", withExtension: "pdf")
         pdfView.document = PDFDocument(url: fileURL!)
         
     }
