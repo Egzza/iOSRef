@@ -41,8 +41,20 @@ class ViewControllerQuiz: UIViewController {
     @IBOutlet weak var tvList: UITableView!
     @IBOutlet weak var btnListoOL: UIButton!
     
+    var refList:[Referencia]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refList = []
+        do{
+            let data = try Data.init(contentsOf: dataFileURL())
+            refList = try PropertyListDecoder().decode([Referencia].self, from: data)
+        } catch{
+            print("error")
+        }
+        
+        
         view4Options.isHidden = true
         viewTF.isHidden = true
         lbPregunta.numberOfLines = 5
@@ -55,6 +67,13 @@ class ViewControllerQuiz: UIViewController {
         preguntasTotales = preguntas
         puntuacion = 0
         ini()
+    }
+    
+    // Obtener URL de plist con referencias
+    func dataFileURL()->URL{
+        let url = Bundle.main.url(forResource: "ref", withExtension: "plist")
+        //print(url)
+        return url!
     }
     
     func ini(){
@@ -80,12 +99,11 @@ class ViewControllerQuiz: UIViewController {
         respuesta = ""
         view4Options.isHidden = false
         viewTF.isHidden = true
-        let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
         
-        var listaRef : [Referencia] = [ref]
-        listaRef.shuffle()
+        refList.shuffle()
+        refList[0].crearElementos()
         
-        let iE = IdentificaElemento(ref: listaRef[0])
+        let iE = IdentificaElemento(ref: refList[0])
         
         lbPregunta.text = iE.creaPregunta()
         lbDatos.text = iE.ref.printReferencia()
@@ -107,12 +125,10 @@ class ViewControllerQuiz: UIViewController {
         view4Options.isHidden = true
         viewTF.isHidden = false
         
-        let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
+        refList.shuffle()
+        refList[0].crearElementos()
         
-        var listaRef : [Referencia] = [ref]
-        listaRef.shuffle()
-        
-        let vF = VerdaderoFalso(ref: listaRef[0])
+        let vF = VerdaderoFalso(ref: refList[0])
         
         lbPregunta.text = vF.creaPregunta()
         lbDatos.text = vF.ref.printReferencia()
