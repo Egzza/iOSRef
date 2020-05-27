@@ -10,6 +10,11 @@ import UIKit
 
 class ViewControllerQuiz: UIViewController {
     
+    
+    @IBOutlet weak var lbPregunta: UILabel!
+    @IBOutlet weak var lbDatos: UILabel!
+    
+    
     //4Options
     @IBOutlet weak var view4Options: UIView!
     @IBOutlet weak var btnOpt1: UIButton!
@@ -35,13 +40,42 @@ class ViewControllerQuiz: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view4Options.isHidden = false
+        viewTF.isHidden = true
         // Do any additional setup after loading the view.
         //navigationController?.setNavigationBarHidden(false, animated: true)
 
     }
     
-
+    @IBAction func btnOpt1(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnOpt2(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnOpt3(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnOpt4(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnListo4O(_ sender: UIButton) {
+        print("listo4o")
+    }
+    
+    
+    @IBAction func btnTrue(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnFalse(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnListoTF(_ sender: UIButton) {
+        print("listoTF")
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
