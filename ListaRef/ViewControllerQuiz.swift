@@ -13,6 +13,8 @@ class ViewControllerQuiz: UIViewController {
     
     var respuesta : String!
     var respuestaE : String!
+    var preguntas : Int!
+    var puntuacion : Int!
     
     @IBOutlet weak var lbPregunta: UILabel!
     @IBOutlet weak var lbDatos: UILabel!
@@ -42,18 +44,33 @@ class ViewControllerQuiz: UIViewController {
         super.viewDidLoad()
         view4Options.isHidden = true
         viewTF.isHidden = true
+        lbPregunta.numberOfLines = 5
+        lbPregunta.adjustsFontSizeToFitWidth = true
+        lbDatos.numberOfLines = 5
+        lbDatos.adjustsFontSizeToFitWidth = true
         // Do any additional setup after loading the view.
         //navigationController?.setNavigationBarHidden(false, animated: true)
+        preguntas = 3
+        puntuacion = 0
         ini()
     }
     
     func ini(){
-        var valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
+        if preguntas == 0 {
+            lbPregunta.text = "Has terminado el quiz."
+            lbDatos.text = "Puntuacion: " + String(puntuacion) + "/3"
+            view4Options.isHidden = true
+            viewTF.isHidden = true
+            return
+        }
+        preguntas -= 1
+        let valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
         if valor == 0{
             iniVF()
         }else {
             iniIE()
         }
+        
     }
     
     //fucion para inicializar identificar elemento
@@ -153,6 +170,7 @@ class ViewControllerQuiz: UIViewController {
             alerta.addAction(accion)
             present(alerta, animated: true, completion: nil)
             print("Respuesta Correcta " + respuesta)
+            puntuacion += 1
             ini()
         }else{
             let alerta = UIAlertController(title: "Incorrecto", message: "Respuesta Correcta: " + respuestaE, preferredStyle: .alert)
@@ -189,6 +207,7 @@ class ViewControllerQuiz: UIViewController {
             alerta.addAction(accion)
             present(alerta, animated: true, completion: nil)
             print("Respuesta Correcta " + respuesta)
+            puntuacion += 1
             ini()
         }else{
             let alerta = UIAlertController(title: "Incorrecto", message: "Respuesta Correcta: " + respuestaE, preferredStyle: .alert)
