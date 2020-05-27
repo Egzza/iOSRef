@@ -14,6 +14,7 @@ class ViewControllerQuiz: UIViewController {
     var respuesta : String!
     var respuestaE : String!
     var preguntas : Int!
+    var preguntasTotales : Int!
     var puntuacion : Int!
     
     @IBOutlet weak var lbPregunta: UILabel!
@@ -50,7 +51,8 @@ class ViewControllerQuiz: UIViewController {
         lbDatos.adjustsFontSizeToFitWidth = true
         // Do any additional setup after loading the view.
         //navigationController?.setNavigationBarHidden(false, animated: true)
-        preguntas = 3
+        preguntas = 5
+        preguntasTotales = preguntas
         puntuacion = 0
         ini()
     }
@@ -58,7 +60,7 @@ class ViewControllerQuiz: UIViewController {
     func ini(){
         if preguntas == 0 {
             lbPregunta.text = "Has terminado el quiz."
-            lbDatos.text = "Puntuacion: " + String(puntuacion) + "/3"
+            lbDatos.text = "Puntuacion: " + String(puntuacion) + "/" + String(preguntasTotales)
             view4Options.isHidden = true
             viewTF.isHidden = true
             return
