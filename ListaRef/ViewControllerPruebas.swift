@@ -37,10 +37,20 @@ class ViewControllerPruebas: UIViewController {
     @IBOutlet weak var tvList: UITableView!
     @IBOutlet weak var btnListoOL: UIButton!
     var ord:Ordena!
+    
+    
+    @IBOutlet weak var collectionV: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //ini() // inicializa una pregunta de indntifica elemento opcion multiple
         ord = Ordena(title: "x", solvedImages: ["uno","dos","tres","cuatro","cinco"])
+        
+        collectionV.dragInteractionEnabled = true
+        collectionV.dragDelegate = self
+        collectionV.dropDelegate = self
+        
     }
     func ini(){
         var valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta

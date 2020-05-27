@@ -320,7 +320,7 @@
         <!--Escoger prueba-->
         <scene sceneID="xau-jj-Tqk">
             <objects>
-                <viewController title="Escoger prueba" id="t5H-1A-9tF" customClass="ViewControllerPruebas" customModule="ListaRef" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Escoger prueba" id="t5H-1A-9tF" customClass="ViewControllerEscogePreuba" customModule="ListaRef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WGl-8U-dZr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -607,6 +607,7 @@
                         <outlet property="btnListoOL" destination="OoO-t4-gIM" id="h01-dI-kjl"/>
                         <outlet property="btnListoTF" destination="lNC-S1-vJW" id="RtN-SN-6od"/>
                         <outlet property="btnTrue" destination="hd6-Ai-Fzj" id="tPF-ee-6Hg"/>
+                        <outlet property="collectionV" destination="9qY-ms-3D2" id="Ezr-gU-Yat"/>
                         <outlet property="lbDatos" destination="yoA-kq-t8S" id="Rze-rg-YGJ"/>
                         <outlet property="lbPregunta" destination="asd-dL-spS" id="xbj-A0-42i"/>
                         <outlet property="tvList" destination="Hm8-Mn-9Ks" id="Ntc-nn-FP0"/>

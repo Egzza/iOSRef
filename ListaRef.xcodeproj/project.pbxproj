@@ -22,6 +22,7 @@
 		DF8C70642450C7A800AF298F /* ViewControllerPruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C70632450C7A800AF298F /* ViewControllerPruebas.swift */; };
 		DF8C70662450C7B200AF298F /* ViewControllerGuia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C70652450C7B200AF298F /* ViewControllerGuia.swift */; };
 		DFEF5495247DD28300B70864 /* ref.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFEF5494247DD28300B70864 /* ref.plist */; };
+		DFEF54BB247E08BF00B70864 /* ViewControllerEscogePreuba.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF54BA247E08BF00B70864 /* ViewControllerEscogePreuba.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		DF8C70632450C7A800AF298F /* ViewControllerPruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPruebas.swift; sourceTree = "<group>"; };
 		DF8C70652450C7B200AF298F /* ViewControllerGuia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGuia.swift; sourceTree = "<group>"; };
 		DFEF5494247DD28300B70864 /* ref.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ref.plist; sourceTree = "<group>"; };
+		DFEF54BA247E08BF00B70864 /* ViewControllerEscogePreuba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEscogePreuba.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				DF8C704F2450B97200AF298F /* SceneDelegate.swift */,
 				DF8C70512450B97200AF298F /* ViewController.swift */,
 				DF8C70532450B97200AF298F /* Main.storyboard */,
+				DFEF54BA247E08BF00B70864 /* ViewControllerEscogePreuba.swift */,
 				9D1C7873247DE538007AC0E3 /* OrdenaCollectionViewCell.swift */,
 				9D1C7871247DDE5C007AC0E3 /* Ordena.swift */,
 				463177C8246B2D3C00170F6C /* IdentificaElemento.swift */,
@@ -168,6 +171,7 @@
 			files = (
 				9D1C7872247DDE5C007AC0E3 /* Ordena.swift in Sources */,
 				9D1C7874247DE538007AC0E3 /* OrdenaCollectionViewCell.swift in Sources */,
+				DFEF54BB247E08BF00B70864 /* ViewControllerEscogePreuba.swift in Sources */,
 				DF8C70642450C7A800AF298F /* ViewControllerPruebas.swift in Sources */,
 				DF8C70522450B97200AF298F /* ViewController.swift in Sources */,
 				DF8C704E2450B97200AF298F /* AppDelegate.swift in Sources */,
