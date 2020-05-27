@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PDFKit
 
 class ViewControllerGuia: UIViewController {
 
@@ -15,6 +16,20 @@ class ViewControllerGuia: UIViewController {
 
         // Do any additional setup after loading the view.
         //navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        
+        // Add PDFView to view controller.
+        let pdfView = PDFView(frame: self.view.bounds)
+        pdfView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.addSubview(pdfView)
+        
+        // Fit content in PDFView.
+        pdfView.autoScales = true
+        
+        // Load Sample.pdf file from app bundle.
+        let fileURL = Bundle.main.url(forResource: "altres_a2016_guia_elaborar_citas", withExtension: "pdf")
+        pdfView.document = PDFDocument(url: fileURL!)
+        
     }
     
 
