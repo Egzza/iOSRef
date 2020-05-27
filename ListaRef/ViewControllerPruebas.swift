@@ -41,17 +41,24 @@ class ViewControllerPruebas: UIViewController {
     
     @IBOutlet weak var collectionV: UICollectionView!
     
+    var refList:[Referencia]!
     var isOrdena:Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refList = []
+        do{
+            let data = try Data.init(contentsOf: dataFileURL())
+            refList = try PropertyListDecoder().decode([Referencia].self, from: data)
+        } catch{
+            print("error")
+        }
+
         lbPregunta.adjustsFontSizeToFitWidth = true
         lbPregunta.numberOfLines = 5
         lbDatos.adjustsFontSizeToFitWidth = true
         lbDatos.numberOfLines = 5
-        //view4Options.isHidden = true
-        //viewTrueFalse.isHidden = true
-        //collectionV.isHidden = false
+        
         if(isOrdena){
             iniOrd()
         } else{
@@ -59,6 +66,14 @@ class ViewControllerPruebas: UIViewController {
         }
 
     }
+    
+    // Obtener URL de plist con referencias
+    func dataFileURL()->URL{
+        let url = Bundle.main.url(forResource: "ref", withExtension: "plist")
+        //print(url)
+        return url!
+    }
+    
     func ini(){
         let valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
         if valor == 0{
@@ -74,12 +89,9 @@ class ViewControllerPruebas: UIViewController {
         view4Options.isHidden = false
         viewTrueFalse.isHidden = true
         collectionV.isHidden = true
-        let ref = Referencia(tipo: "Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
-        
-        var listaRef : [Referencia] = [ref]
-        listaRef.shuffle()
-        
-        let iE = IdentificaElemento(ref: listaRef[0])
+        refList.shuffle()
+        refList[0].crearElementos()
+        let iE = IdentificaElemento(ref: refList[0])
         
         lbPregunta.text = iE.creaPregunta()
         lbDatos.text = iE.ref.printReferencia()
@@ -108,12 +120,9 @@ class ViewControllerPruebas: UIViewController {
         view4Options.isHidden = true
         viewTrueFalse.isHidden = false
         collectionV.isHidden = true
-        let ref = Referencia(tipo: "Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
-        
-        var listaRef : [Referencia] = [ref]
-        listaRef.shuffle()
-        
-        let vF = VerdaderoFalso(ref: listaRef[0])
+        refList.shuffle()
+        refList[0].crearElementos()
+        let vF = VerdaderoFalso(ref: refList[0])
         
         lbPregunta.text = vF.creaPregunta()
         lbDatos.text = vF.ref.printReferencia()
@@ -135,7 +144,9 @@ class ViewControllerPruebas: UIViewController {
         view4Options.isHidden = true
         viewTrueFalse.isHidden = true
         collectionV.isHidden = false
-        ord = Ordena(title: "x", solvedImages: ["uno","dos","tres","cuatro","cinco"])
+        refList.shuffle()
+        refList[0].crearElementos()
+        ord = Ordena(elementos: refList[0].elementos)
         collectionV.dragInteractionEnabled = true
         collectionV.dragDelegate = self
         collectionV.dropDelegate = self

@@ -41,57 +41,60 @@ class Referencia: Codable{
     self.editorial = editorial
     self.url = url
     self.editores = editores
-
-    switch tipo {
-      case "Libro":
-        partes = ["autor", "aPublicacion", "titulo", "edicion","ciudadPais", "editorial"]
-        elementos = [autor, aPublicacion,titulo, edicion, ciudadPais, editorial]
-        
-      case "Libro Electronico":
-        partes = ["autor", "titulo", "aPublicacion", "url"]
-        elementos = [autor, titulo, aPublicacion, url]
-        
-        
-      case "Capitulo Libro":
-        partes = ["autor", "aPublicacion","titulo", "tituloMayor", "paginas", "ciudadPais", "editorial", "editores"]
-        elementos = [autor, aPublicacion,  titulo, tituloMayor, paginas, ciudadPais, editorial, editores]
-        
-    case "Revista":
-        partes = ["autor", "aPublicacion", "titulo", "tituloMayor", "edicion", "paginas"]
-        elementos = [autor, aPublicacion, titulo, tituloMayor, edicion, paginas]
-        
-    case "Revista Electronica":
-        partes = ["autor", "aPublicacion","titulo", "tituloMayor", "edicion", "paginas", "url"]
-        elementos = [autor, aPublicacion, titulo, tituloMayor, edicion, paginas, url]
-    
-    case "Articulo Internet":
-        partes = ["autor", "aPublicacion", "titulo", "url"]
-        elementos = [autor, aPublicacion, titulo, url]
-        
-    case "Articulo Periodico":
-        partes = ["autor", "titulo", "aPublicacion", "tituloMayor", "paginas"]
-        elementos = [autor, titulo, aPublicacion, tituloMayor, paginas]
-    
-        
-    case "Video":
-        partes = ["autor", "aPublicacion", "titulo", "url"]
-        elementos = [autor, aPublicacion, titulo, url]
- 
-    case "Pagina Web":
-        partes = ["autor", "aPublicacion", "titulo", "url"]
-        elementos = [autor, aPublicacion, titulo, url]
-
-    case "Red Social":
-        partes = ["autor", "aPublicacion", "titulo", "url"]
-        elementos = [autor, aPublicacion, titulo, url]
-       
-        
-      default:
-        partes = []
-        elementos = []
-    }
+    crearElementos()
 
   }
+    
+    func crearElementos(){
+        switch tipo {
+             case "Libro":
+               partes = ["autor", "aPublicacion", "titulo", "edicion","ciudadPais", "editorial"]
+               elementos = [autor, aPublicacion,titulo, edicion, ciudadPais, editorial]
+               
+             case "Libro Electronico":
+               partes = ["autor", "titulo", "aPublicacion", "url"]
+               elementos = [autor, titulo, aPublicacion, url]
+               
+               
+             case "Capitulo Libro":
+               partes = ["autor", "aPublicacion","titulo", "tituloMayor", "paginas", "ciudadPais", "editorial", "editores"]
+               elementos = [autor, aPublicacion,  titulo, tituloMayor, paginas, ciudadPais, editorial, editores]
+               
+           case "Revista":
+               partes = ["autor", "aPublicacion", "titulo", "tituloMayor", "edicion", "paginas"]
+               elementos = [autor, aPublicacion, titulo, tituloMayor, edicion, paginas]
+               
+           case "Revista Electronica":
+               partes = ["autor", "aPublicacion","titulo", "tituloMayor", "edicion", "paginas", "url"]
+               elementos = [autor, aPublicacion, titulo, tituloMayor, edicion, paginas, url]
+           
+           case "Articulo Internet":
+               partes = ["autor", "aPublicacion", "titulo", "url"]
+               elementos = [autor, aPublicacion, titulo, url]
+               
+           case "Articulo Periodico":
+               partes = ["autor", "titulo", "aPublicacion", "tituloMayor", "paginas"]
+               elementos = [autor, titulo, aPublicacion, tituloMayor, paginas]
+           
+               
+           case "Video":
+               partes = ["autor", "aPublicacion", "titulo", "url"]
+               elementos = [autor, aPublicacion, titulo, url]
+        
+           case "Pagina Web":
+               partes = ["autor", "aPublicacion", "titulo", "url"]
+               elementos = [autor, aPublicacion, titulo, url]
+
+           case "Red Social":
+               partes = ["autor", "aPublicacion", "titulo", "url"]
+               elementos = [autor, aPublicacion, titulo, url]
+              
+               
+             default:
+               partes = []
+               elementos = []
+           }
+    }
 
   func printReferencia() -> String{
     switch self.tipo {
@@ -115,7 +118,6 @@ class Referencia: Codable{
         let referencia = autor + " " + aPublicacion + " " + titulo + " " +  " Recuperado de: " + url
         return referencia
            
-            
     case "Articulo Periodico":
         let referencia = autor + " " + aPublicacion + " " + titulo + " " +  tituloMayor + ", " + paginas + "."
         return referencia
@@ -136,3 +138,5 @@ class Referencia: Codable{
         return "error en printReferencia"
         
     }
+}
+}

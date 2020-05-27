@@ -8,13 +8,12 @@
 
 import Foundation
 class Ordena: Codable {
-var title: String
-var solved: [String]
-var unsolved: [String]
 
-    init(title: String, solvedImages: [String]) {
-        self.title = title
-        self.solved = solvedImages
+    var solved: [String]
+    var unsolved: [String]
+
+    init(elementos: [String]) {
+        self.solved = elementos
         self.unsolved = self.solved.shuffled()
     }
 }
