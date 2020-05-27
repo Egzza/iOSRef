@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Referencia: NSObject{
+class Referencia: Codable{
 
   var tipo : String = ""
 
@@ -95,40 +95,44 @@ class Referencia: NSObject{
 
   func printReferencia() -> String{
     switch self.tipo {
-      case "Referencia Libro":
+      case "Libro":
         let referencia = autor + ", " + aPublicacion + ", " + titulo + ", " +  ciudadPais + ", " + editorial + ". ";
         return referencia;
-      case "Referencia Libro Electronico":
+    case "Libro Electronico":
         let referencia = autor + " " + aPublicacion + " " + titulo + " Recuperado de: " + url
         return referencia;
-      case "Referencia Capitulo Libro":
+    case "Capitulo Libro":
         let referencia = autor + " " + aPublicacion + ", " + titulo + "En " +  editores + ", " + tituloMayor + " " + paginas + ". " + ciudadPais + ": " + editorial + ".";
         return referencia;
-      case "Referencia Diccionario":
-        let referencia = autor + " " + aPublicacion + " " + titulo + " En " + tituloMayor + " " + paginas + " " + ciudadPais + ": " + editorial + "."
-        return referencia;
-      case "Referencia Revista":
+    case "Revista":
         let referencia = autor + " " + aPublicacion + " " + titulo + " " +  tituloMayor + ", " + edicion + ", " + paginas + "."
         return referencia;
-      case "Referencia Revista Electronica":
+    case "Revista Electronica":
         let referencia = autor + " " + aPublicacion + " " + titulo + " " +  tituloMayor + ", " + edicion + ", " + paginas + " Recuperado de: " + url
         return referencia;
-      case "Referencia Pagina Web":
+        
+    case "Articulo Internet":
+        let referencia = autor + " " + aPublicacion + " " + titulo + " " +  " Recuperado de: " + url
+        return referencia
+           
+            
+    case "Articulo Periodico":
+        let referencia = autor + " " + aPublicacion + " " + titulo + " " +  tituloMayor + ", " + paginas + "."
+        return referencia
+        
+      case "Pagina Web":
         let referencia = autor + " " + aPublicacion + " " + titulo + " Recuperado de: " + url
         return referencia;
-      case "Referencia Red Social":
+      case "Red Social":
         let referencia = autor + " " + aPublicacion + " " + titulo + " " + url
         return referencia;
+        
+    case "Video":
+        let referencia = autor + " " + aPublicacion + " " + titulo + " " + url
+        return referencia;
+        
       default:
         print("tipo de referencia incorrecto")
         return "error en printReferencia"
         
     }
-
-  }
-
-}
-
-
-
-
