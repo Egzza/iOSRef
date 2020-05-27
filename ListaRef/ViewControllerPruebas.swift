@@ -36,10 +36,21 @@ class ViewControllerPruebas: UIViewController {
     @IBOutlet weak var viewOrderList: UIView!
     @IBOutlet weak var tvList: UITableView!
     @IBOutlet weak var btnListoOL: UIButton!
+    var ord:Ordena!
+    
+    
+    @IBOutlet weak var collectionV: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ini() // inicializa una pregunta de indntifica elemento opcion multiple
+        //ini() // inicializa una pregunta de indntifica elemento opcion multiple
+        ord = Ordena(title: "x", solvedImages: ["uno","dos","tres","cuatro","cinco"])
+        
+        collectionV.dragInteractionEnabled = true
+        collectionV.dragDelegate = self
+        collectionV.dropDelegate = self
+        
     }
     func ini(){
         var valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
@@ -199,4 +210,100 @@ class ViewControllerPruebas: UIViewController {
     }
     */
 
+}
+
+
+// MARK:- Ordena
+extension ViewControllerPruebas: UICollectionViewDataSource, UICollectionViewDelegate{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //Agarrar la lista length
+        return ord.unsolved.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OrdenaCollectionViewCell
+        // Agrega el label
+        cell.myLabel.text = ord.unsolved[indexPath.item]
+        return cell
+    }
+    
+}
+
+extension ViewControllerPruebas : UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(top: 40, left: 15, bottom: 40, right: 15)
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = collectionView.bounds.width
+        var customCollectionWidth: CGFloat!
+        customCollectionWidth = collectionViewWidth/3 - 10
+        return CGSize(width: customCollectionWidth, height: customCollectionWidth)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
+
+extension ViewControllerPruebas: UICollectionViewDragDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let item = self.ord.unsolved[indexPath.item] // Poner el string al que le dio click para hacer drag
+        let itemProvider = NSItemProvider(object: item as NSString)
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        dragItem.localObject = dragItem
+        return [dragItem]
+    }
+}
+
+extension ViewControllerPruebas: UICollectionViewDropDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+        if collectionView.hasActiveDrag {
+            return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+        }
+        return UICollectionViewDropProposal(operation: .forbidden)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+        
+        var destinationIndexPath: IndexPath
+        if let indexPath = coordinator.destinationIndexPath {
+            destinationIndexPath = indexPath
+        } else {
+            let row = collectionView.numberOfItems(inSection: 0)
+            destinationIndexPath = IndexPath(item: row - 1, section: 0)
+        }
+        
+        if coordinator.proposal.operation == .move {
+            self.reorderItems(coordinator: coordinator, destinationIndexPath: destinationIndexPath, collectionView: collectionView)
+            collectionView.reloadData()
+        }
+    }
+    
+    fileprivate func reorderItems(coordinator: UICollectionViewDropCoordinator, destinationIndexPath:IndexPath, collectionView: UICollectionView) {
+        
+        if let item = coordinator.items.first,
+            let sourceIndexPath = item.sourceIndexPath {
+            
+            collectionView.performBatchUpdates({
+                ord.unsolved.swapAt(sourceIndexPath.item, destinationIndexPath.item)
+                collectionView.reloadItems(at: [sourceIndexPath,destinationIndexPath])
+                
+            }, completion: nil)
+            
+            coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
+        }
+    }
 }
