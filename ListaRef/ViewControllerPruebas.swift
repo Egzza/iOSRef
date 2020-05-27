@@ -218,6 +218,20 @@ class ViewControllerPruebas: UIViewController {
       }
     }
     
+    @IBAction func CheckOrdena(_ sender: UIButton) {
+        if (ord.unsolved == ord.solved){
+            let alerta = UIAlertController(title: "Correcto", message: "Respuesta Correcta", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alerta.addAction(accion)
+            present(alerta, animated: true, completion: nil)
+            iniOrd()
+        }else{
+            let alerta = UIAlertController(title: "Incorrecto", message: "Algo aun no esta bien", preferredStyle: .alert)
+            let accion = UIAlertAction(title: "Intentar de Nuevo", style: .cancel, handler: nil)
+            alerta.addAction(accion)
+            present(alerta, animated: true, completion: nil)
+        }
+    }
     
     
     /*
