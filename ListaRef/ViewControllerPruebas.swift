@@ -89,10 +89,17 @@ class ViewControllerPruebas: UIViewController {
         btOp2.setTitle(iE.op[1], for: .normal)
         btOp3.setTitle(iE.op[2], for: .normal)
         btOp4.setTitle(iE.op[3], for: .normal)
-        btOp1.backgroundColor = UIColor.gray
-        btOp2.backgroundColor = UIColor.gray
-        btOp3.backgroundColor = UIColor.gray
-        btOp4.backgroundColor = UIColor.gray
+        
+        btOp1.layer.borderColor = UIColor( red: 0.0, green: 0.0, blue:0.0, alpha: 0.5 ).cgColor
+        btOp2.layer.borderColor = UIColor( red: 0.0, green: 0.0, blue:0.0, alpha: 0.5 ).cgColor
+        btOp3.layer.borderColor = UIColor( red: 0.0, green: 0.0, blue:0.0, alpha: 0.5 ).cgColor
+        btOp4.layer.borderColor = UIColor( red: 0.0, green: 0.0, blue:0.0, alpha: 0.5 ).cgColor
+        
+        btOp1.layer.borderWidth = 0
+        btOp2.layer.borderWidth = 0
+        btOp3.layer.borderWidth = 0
+        btOp4.layer.borderWidth = 0
+
     }
     
     //funcion para inicializar verdadero o falso
@@ -115,8 +122,12 @@ class ViewControllerPruebas: UIViewController {
         btnTrue.setTitle("Verdadero", for: .normal)
         btnFalse.setTitle("Falso", for: .normal)
         
-        btnTrue.backgroundColor = UIColor.gray
-        btnFalse.backgroundColor = UIColor.gray
+        btnTrue.layer.borderColor = UIColor( red: 0.0, green: 0.0, blue:0.0, alpha: 0.5 ).cgColor
+        btnFalse.layer.borderColor = UIColor( red: 0.0, green: 0.0, blue:0.0, alpha: 0.5 ).cgColor
+        
+        btnTrue.layer.borderWidth = 0
+        btnFalse.layer.borderWidth = 0
+        
     }
     
     //funcion para inicializar ordena
@@ -136,20 +147,21 @@ class ViewControllerPruebas: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
-        btOp1.backgroundColor = UIColor.green
-        btOp2.backgroundColor = UIColor.gray
-        btOp3.backgroundColor = UIColor.gray
-        btOp4.backgroundColor = UIColor.gray
+        
+        btOp1.layer.borderWidth = 5
+        btOp2.layer.borderWidth = 0
+        btOp3.layer.borderWidth = 0
+        btOp4.layer.borderWidth = 0
     }
     
     @IBAction func btOp2(_ sender: UIButton) {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
-        btOp1.backgroundColor = UIColor.gray
-        btOp2.backgroundColor = UIColor.green
-        btOp3.backgroundColor = UIColor.gray
-        btOp4.backgroundColor = UIColor.gray
+        btOp1.layer.borderWidth = 0
+        btOp2.layer.borderWidth = 5
+        btOp3.layer.borderWidth = 0
+        btOp4.layer.borderWidth = 0
         
     }
     
@@ -157,20 +169,20 @@ class ViewControllerPruebas: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
-        btOp1.backgroundColor = UIColor.gray
-        btOp2.backgroundColor = UIColor.gray
-        btOp3.backgroundColor = UIColor.green
-        btOp4.backgroundColor = UIColor.gray
+        btOp1.layer.borderWidth = 0
+        btOp2.layer.borderWidth = 0
+        btOp3.layer.borderWidth = 5
+        btOp4.layer.borderWidth = 0
     }
     
     @IBAction func btOp4(_ sender: UIButton) {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
-        btOp1.backgroundColor = UIColor.gray
-        btOp2.backgroundColor = UIColor.gray
-        btOp3.backgroundColor = UIColor.gray
-        btOp4.backgroundColor = UIColor.green
+        btOp1.layer.borderWidth = 0
+        btOp2.layer.borderWidth = 0
+        btOp3.layer.borderWidth = 0
+        btOp4.layer.borderWidth = 5
     }
     
     // botones de verdadero o falso
@@ -178,16 +190,16 @@ class ViewControllerPruebas: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
-        btnTrue.backgroundColor = UIColor.green
-        btnFalse.backgroundColor = UIColor.gray
+        btnTrue.layer.borderWidth = 5
+        btnFalse.layer.borderWidth = 0
     }
     
     @IBAction func btnFalse(_ sender: UIButton) {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
-        btnTrue.backgroundColor = UIColor.gray
-        btnFalse.backgroundColor = UIColor.green
+        btnTrue.layer.borderWidth = 0
+        btnFalse.layer.borderWidth = 5
     }
     
     
