@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		460822EC247ACFDC000E73A8 /* VerdaderoFalso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460822EB247ACFDC000E73A8 /* VerdaderoFalso.swift */; };
 		463177C9246B2D3C00170F6C /* IdentificaElemento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463177C8246B2D3C00170F6C /* IdentificaElemento.swift */; };
+		46779E2F247F2CF600F4F01A /* APA_referenciasparafrasis.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 46779E2E247F2CF600F4F01A /* APA_referenciasparafrasis.pdf */; };
 		46E1B03924510C98009C95A6 /* Referencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1B03824510C98009C95A6 /* Referencia.swift */; };
 		9D1C7872247DDE5C007AC0E3 /* Ordena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C7871247DDE5C007AC0E3 /* Ordena.swift */; };
 		9D1C7874247DE538007AC0E3 /* OrdenaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C7873247DE538007AC0E3 /* OrdenaCollectionViewCell.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		460822EB247ACFDC000E73A8 /* VerdaderoFalso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerdaderoFalso.swift; sourceTree = "<group>"; };
 		463177C8246B2D3C00170F6C /* IdentificaElemento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificaElemento.swift; sourceTree = "<group>"; };
+		46779E2E247F2CF600F4F01A /* APA_referenciasparafrasis.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = APA_referenciasparafrasis.pdf; path = ../../../../Downloads/APA_referenciasparafrasis.pdf; sourceTree = "<group>"; };
 		46E1B03824510C98009C95A6 /* Referencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referencia.swift; sourceTree = "<group>"; };
 		9D1C7871247DDE5C007AC0E3 /* Ordena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ordena.swift; sourceTree = "<group>"; };
 		9D1C7873247DE538007AC0E3 /* OrdenaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdenaCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				DF8C70632450C7A800AF298F /* ViewControllerPruebas.swift */,
 				DF8C70652450C7B200AF298F /* ViewControllerGuia.swift */,
 				46E1B03824510C98009C95A6 /* Referencia.swift */,
+				46779E2E247F2CF600F4F01A /* APA_referenciasparafrasis.pdf */,
 				DF8C70562450B97400AF298F /* Assets.xcassets */,
 				DFEF5494247DD28300B70864 /* ref.plist */,
 				DF8C70582450B97400AF298F /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 			files = (
 				DFEF5495247DD28300B70864 /* ref.plist in Resources */,
 				DF8C705A2450B97400AF298F /* LaunchScreen.storyboard in Resources */,
+				46779E2F247F2CF600F4F01A /* APA_referenciasparafrasis.pdf in Resources */,
 				DF8C70572450B97400AF298F /* Assets.xcassets in Resources */,
 				DF8C70552450B97200AF298F /* Main.storyboard in Resources */,
 			);
