@@ -41,29 +41,31 @@ class ViewControllerPruebas: UIViewController {
     
     @IBOutlet weak var collectionV: UICollectionView!
     
+    var isOrdena:Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         lbPregunta.adjustsFontSizeToFitWidth = true
         lbPregunta.numberOfLines = 5
         lbDatos.adjustsFontSizeToFitWidth = true
         lbDatos.numberOfLines = 5
-        ini() // inicializa una pregunta de indntifica elemento opcion multiple
-        ord = Ordena(title: "x", solvedImages: ["uno","dos","tres","cuatro","cinco"])
-        collectionV.dragInteractionEnabled = true
-        collectionV.dragDelegate = self
-        collectionV.dropDelegate = self
-        
+        view4Options.isHidden = true
+        viewTrueFalse.isHidden = true
+        collectionV.isHidden = true
+        if(isOrdena){
+            iniOrd()
+        } else{
+            ini()
+        }
 
     }
     func ini(){
         var valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
         if valor == 0{
             iniVF()
-        }else {
+        }else{
             iniIE()
-        }
+        } 
     }
     
     //fucion para inicializar identificar elemento
@@ -71,6 +73,7 @@ class ViewControllerPruebas: UIViewController {
         respuesta = ""
         view4Options.isHidden = false
         viewTrueFalse.isHidden = true
+        collectionV.isHidden = true
         let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
         
         var listaRef : [Referencia] = [ref]
@@ -97,7 +100,7 @@ class ViewControllerPruebas: UIViewController {
         respuesta = ""
         view4Options.isHidden = true
         viewTrueFalse.isHidden = false
-        
+        collectionV.isHidden = true
         let ref = Referencia(tipo: "Referencia Libro Electronico", autor: "Cervantes Barba, C.", aPublicacion: "(2001).", fechaConsulta: "", titulo: "La sociología de las noticias y el enfoque agenda-setting.", tituloMayor: "", edicion: "", paginas: "", ciudadPais: "", editorial: "", url: "http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393", editores: "") // una referencia de prueba
         
         var listaRef : [Referencia] = [ref]
@@ -114,6 +117,17 @@ class ViewControllerPruebas: UIViewController {
         
         btnTrue.backgroundColor = UIColor.gray
         btnFalse.backgroundColor = UIColor.gray
+    }
+    
+    //funcion para inicializar ordena
+    func iniOrd(){
+        view4Options.isHidden = true
+        viewTrueFalse.isHidden = true
+        collectionV.isHidden = false
+        ord = Ordena(title: "x", solvedImages: ["uno","dos","tres","cuatro","cinco"])
+        collectionV.dragInteractionEnabled = true
+        collectionV.dragDelegate = self
+        collectionV.dropDelegate = self
     }
     
     // botones de identificar elemento
@@ -226,7 +240,11 @@ extension ViewControllerPruebas: UICollectionViewDataSource, UICollectionViewDel
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //Agarrar la lista length
-        return ord.unsolved.count
+        if ord != nil{
+            return ord.unsolved.count
+        } else {
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
