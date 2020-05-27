@@ -43,30 +43,49 @@ class Referencia: NSObject{
     self.editores = editores
 
     switch tipo {
-      case "Referencia Libro":
-        partes = ["autor", "titulo", "aPublicacion", "ciudadPais", "editorial"]
-        elementos = [autor, titulo, aPublicacion, ciudadPais, editorial]
-      case "Referencia Libro Electronico":
-        partes = ["autor", "titulo", "aPublicacion", "url"]
+      case "Libro":
+        partes = ["autor", "aPublicacion", "titulo", "edicion","ciudadPais", "editorial"]
+        elementos = [autor, aPublicacion,titulo, edicion, ciudadPais, editorial]
+        
+      case "Libro Electronico":
+        partes = ["autor", "aPublicacion", "titulo", "url"]
         elementos = [autor, titulo, aPublicacion, url]
-      case "Referencia Capitulo Libro":
-        partes = ["autor", "titulo", "aPublicacion", "ciudadPais", "editorial", "editores", "tituloMayor", "paginas"]
-        elementos = [autor, titulo, aPublicacion, ciudadPais, editorial, editores, tituloMayor, paginas]
-      case "Referencia Diccionario":
-        partes = ["autor", "titulo", "aPublicacion", "ciudadPais", "editorial", "tituloMayor", "paginas"]
-        elementos = [autor, titulo, aPublicacion, ciudadPais, editorial, tituloMayor, paginas]
-      case "Referencia Revista":
-        partes = ["autor", "titulo", "aPublicacion", "tituloMayor", "edicion", "paginas"]
-        elementos = [autor, titulo, aPublicacion, tituloMayor, edicion, paginas]
-      case "Referencia Revista Electronica":
-        partes = ["autor", "titulo", "aPublicacion", "tituloMayor", "edicion", "paginas", "url"]
-        elementos = [autor, titulo, aPublicacion, tituloMayor, edicion, paginas, url]
-      case "Referencia Pagina Web":
-        partes = ["autor", "titulo", "aPublicacion", "url"]
-        elementos = [autor, titulo, aPublicacion, url]
-      case "Referencia Red Social":
-        partes = ["autor", "titulo", "aPublicacion", "url"]
-        elementos = [autor, titulo, aPublicacion, url]
+        
+        
+      case "Capitulo Libro":
+        partes = ["autor", "aPublicacion","titulo", "tituloMayor", "paginas", "ciudadPais", "editorial", "editores"]
+        elementos = [autor, aPublicacion,  titulo, tituloMayor, paginas, ciudadPais, editorial, editores]
+        
+    case "Revista":
+        partes = ["autor", "aPublicacion", "titulo", "tituloMayor", "edicion", "paginas"]
+        elementos = [autor, aPublicacion, titulo, tituloMayor, edicion, paginas]
+        
+    case "Revista Electronica":
+        partes = ["autor", "aPublicacion","titulo", "tituloMayor", "edicion", "paginas", "url"]
+        elementos = [autor, aPublicacion, titulo, tituloMayor, edicion, paginas, url]
+    
+    case "Articulo Internet":
+        partes = ["autor", "aPublicacion", "titulo", "url"]
+        elementos = [autor, aPublicacion, titulo, url]
+        
+    case "Articulo Periodico":
+        partes = ["autor", "aPublicacion", "titulo", "tituloMayor", "paginas"]
+        elementos = [autor, titulo, aPublicacion, tituloMayor, paginas]
+    
+        
+    case "Video":
+        partes = ["autor", "aPublicacion", "titulo", "url"]
+        elementos = [autor, aPublicacion, titulo, url]
+ 
+    case "Pagina Web":
+        partes = ["autor", "aPublicacion", "titulo", "url"]
+        elementos = [autor, aPublicacion, titulo, url]
+
+    case "Red Social":
+        partes = ["autor", "aPublicacion", "titulo", "url"]
+        elementos = [autor, aPublicacion, titulo, url]
+       
+        
       default:
         partes = []
         elementos = []
