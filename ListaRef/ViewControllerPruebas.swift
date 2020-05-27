@@ -39,6 +39,10 @@ class ViewControllerPruebas: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lbPregunta.adjustsFontSizeToFitWidth = true
+        lbPregunta.numberOfLines = 5
+        lbDatos.adjustsFontSizeToFitWidth = true
+        lbDatos.numberOfLines = 5
         ini() // inicializa una pregunta de indntifica elemento opcion multiple
     }
     func ini(){
