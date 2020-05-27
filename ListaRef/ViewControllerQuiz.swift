@@ -105,7 +105,9 @@ class ViewControllerQuiz: UIViewController {
         
         let iE = IdentificaElemento(ref: refList[0])
         
-        lbPregunta.text = iE.creaPregunta()
+        let numP = preguntasTotales - preguntas
+        let snumP = String(numP) + ". "
+        lbPregunta.text = snumP + iE.creaPregunta()
         lbDatos.text = iE.ref.printReferencia()
         iE.creaOpciones()
         respuestaE = iE.respuesta
@@ -130,7 +132,9 @@ class ViewControllerQuiz: UIViewController {
         
         let vF = VerdaderoFalso(ref: refList[0])
         
-        lbPregunta.text = vF.creaPregunta()
+        let numP = preguntasTotales - preguntas
+        let snumP = String(numP) + ". "
+        lbPregunta.text = snumP + vF.creaPregunta()
         lbDatos.text = vF.ref.printReferencia()
         
         respuestaE = vF.respuesta
