@@ -44,13 +44,18 @@ class ViewControllerPruebas: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //ini() // inicializa una pregunta de indntifica elemento opcion multiple
+      
+        lbPregunta.adjustsFontSizeToFitWidth = true
+        lbPregunta.numberOfLines = 5
+        lbDatos.adjustsFontSizeToFitWidth = true
+        lbDatos.numberOfLines = 5
+        ini() // inicializa una pregunta de indntifica elemento opcion multiple
         ord = Ordena(title: "x", solvedImages: ["uno","dos","tres","cuatro","cinco"])
-        
         collectionV.dragInteractionEnabled = true
         collectionV.dragDelegate = self
         collectionV.dropDelegate = self
         
+
     }
     func ini(){
         var valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
