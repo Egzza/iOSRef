@@ -99,19 +99,19 @@ class Referencia: Codable{
   func printReferencia() -> String{
     switch self.tipo {
       case "Libro":
-        let referencia = autor + ", " + aPublicacion + ", " + titulo + ", " +  ciudadPais + ", " + editorial + ". ";
+        let referencia = autor + " " + aPublicacion + " " + titulo + " " +  ciudadPais + " " + editorial + ". ";
         return referencia;
     case "Libro Electronico":
         let referencia = autor + " " + aPublicacion + " " + titulo + " Recuperado de: " + url
         return referencia;
     case "Capitulo Libro":
-        let referencia = autor + " " + aPublicacion + ", " + titulo + "En " +  editores + ", " + tituloMayor + " " + paginas + ". " + ciudadPais + ": " + editorial + ".";
+        let referencia = autor + " " + aPublicacion + ", " + titulo + "En " +  editores + " " + tituloMayor + " " + paginas + ". " + ciudadPais + ": " + editorial + ".";
         return referencia;
     case "Revista":
-        let referencia = autor + " " + aPublicacion + " " + titulo + " " +  tituloMayor + ", " + edicion + ", " + paginas + "."
+        let referencia = autor + " " + aPublicacion + " " + titulo + " " +  tituloMayor + ", " + edicion + " " + paginas + "."
         return referencia;
     case "Revista Electronica":
-        let referencia = autor + " " + aPublicacion + " " + titulo + " " +  tituloMayor + ", " + edicion + ", " + paginas + " Recuperado de: " + url
+        let referencia = autor + " " + aPublicacion + " " + titulo + " " +  tituloMayor + ", " + edicion + " " + paginas + " Recuperado de: " + url
         return referencia;
         
     case "Articulo Internet":
@@ -119,7 +119,7 @@ class Referencia: Codable{
         return referencia
            
     case "Articulo Periodico":
-        let referencia = autor + " " + aPublicacion + " " + titulo + " " +  tituloMayor + ", " + paginas + "."
+        let referencia = autor + " " + aPublicacion + " " + titulo + " " +  tituloMayor + " " + paginas + "."
         return referencia
         
       case "Pagina Web":

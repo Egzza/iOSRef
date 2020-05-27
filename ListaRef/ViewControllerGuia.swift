@@ -16,7 +16,7 @@ class ViewControllerGuia: UIViewController {
 
         // Do any additional setup after loading the view.
         //navigationController?.setNavigationBarHidden(false, animated: true)
-        
+        self.title = "Guia"
         
         // Add PDFView to view controller.
         let pdfView = PDFView(frame: self.view.bounds)
