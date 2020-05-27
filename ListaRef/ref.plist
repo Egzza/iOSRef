@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>r_01</key>
+	<dict>
+		<key>tipo</key>
+		<string>Libro</string>
+		<key>autor</key>
+		<string>Carpena, A.</string>
+		<key>aPublicacion</key>
+		<string>(2006).</string>
+		<key>fechaConsulta</key>
+		<string></string>
+		<key>titulo</key>
+		<string>Educació socioemocional a primària: materials pràctics i de reflexió</string>
+		<key>tituloMayor</key>
+		<string></string>
+		<key>edicion</key>
+		<string>(2a ed.).</string>
+		<key>paginas</key>
+		<string></string>
+		<key>ciudadPais</key>
+		<string>Vic:</string>
+		<key>editorial</key>
+		<string>Eumo.</string>
+		<key>url</key>
+		<string></string>
+		<key>editores</key>
+		<string></string>
+	</dict>
+    <key>r_02</key>
+    <dict>
+        <key>tipo</key>
+        <string>Libro</string>
+        <key>autor</key>
+        <string>Kaltenborn, F. M.</string>
+        <key>aPublicacion</key>
+        <string>(2004).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Fisioterapia manual: extremidades</string>
+        <key>tituloMayor</key>
+        <string></string>
+        <key>edicion</key>
+        <string>(2a ed.).</string>
+        <key>paginas</key>
+        <string></string>
+        <key>ciudadPais</key>
+        <string>Madrid:</string>
+        <key>editorial</key>
+        <string>McGraw-Hill Interamericana.</string>
+        <key>url</key>
+        <string></string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_03</key>
+    <dict>
+        <key>tipo</key>
+        <string>Libro</string>
+        <key>autor</key>
+        <string>Sevilla, M., y Summer, T. (Eds.).</string>
+        <key>aPublicacion</key>
+        <string>(2012).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Física nuclear: experiències de laboratori.</string>
+        <key>tituloMayor</key>
+        <string></string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string></string>
+        <key>ciudadPais</key>
+        <string>Barcelona:</string>
+        <key>editorial</key>
+        <string>Edicions UPC.</string>
+        <key>url</key>
+        <string></string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_04</key>
+    <dict>
+        <key>tipo</key>
+        <string>Libro</string>
+        <key>autor</key>
+        <string>Goleman, D.</string>
+        <key>aPublicacion</key>
+        <string>(2010).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Inteligencia emocional.</string>
+        <key>tituloMayor</key>
+        <string></string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string></string>
+        <key>ciudadPais</key>
+        <string>Barcelona:</string>
+        <key>editorial</key>
+        <string>Editorial Kairós.</string>
+        <key>url</key>
+        <string></string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_05</key>
+    <dict>
+        <key>tipo</key>
+        <string>Capitulo Libro</string>
+        <key>autor</key>
+        <string>Lugo Filippi, C.</string>
+        <key>aPublicacion</key>
+        <string>(2004).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Recetario de incautos.</string>
+        <key>tituloMayor</key>
+        <string>El placer de leer y escribir: Antología de lecturas</string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string>(pp. 88-91).</string>
+        <key>ciudadPais</key>
+        <string>Guaynabo, P.R.:</string>
+        <key>editorial</key>
+        <string>Editorial Plaza Mayor.</string>
+        <key>url</key>
+        <string></string>
+        <key>editores</key>
+        <string>En I. Ballester, Y. Cruz, H. E. Quintana, J. Santiago &amp; C. M. Sarriera (Eds.),</string>
+        </dict>
+    <key>r_06</key>
+    <dict>
+        <key>tipo</key>
+        <string>Libro Electronico</string>
+        <key>autor</key>
+        <string>Cervantes Barba, C.</string>
+        <key>aPublicacion</key>
+        <string>(2001).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>La sociología de las noticias y el enfoque agenda-setting.</string>
+        <key>tituloMayor</key>
+        <string></string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string></string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string>http://site.ebrary.com/lib/interpuertoricosp/Doc?id=101 49393</string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_07</key>
+    <dict>
+        <key>tipo</key>
+        <string>Libro Electronico</string>
+        <key>autor</key>
+        <string>Schiraldi, G. R.</string>
+        <key>aPublicacion</key>
+        <string>(2009).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>The post-traumatic stress disorder sourcebook : a guide to healing, recovery, and growth.</string>
+        <key>tituloMayor</key>
+        <string></string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string></string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string>doi: 10.1036/0071393722</string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_08</key>
+    <dict>
+        <key>tipo</key>
+        <string>Revista</string>
+        <key>autor</key>
+        <string>Elousa, P.</string>
+        <key>aPublicacion</key>
+        <string>(2010).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Valores subjetivos de las dimensiones de calidad de vida en adultos mayores.</string>
+        <key>tituloMayor</key>
+        <string>Revista española de geriatría y gerontología</string>
+        <key>edicion</key>
+        <string>45(2),</string>
+        <key>paginas</key>
+        <string>61-71.</string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string></string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_09</key>
+    <dict>
+        <key>tipo</key>
+        <string>Revista</string>
+        <key>autor</key>
+        <string>Gadner, H.</string>
+        <key>aPublicacion</key>
+        <string>(1983).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>La Teoría de las Inteligencias Múltiples.</string>
+        <key>tituloMayor</key>
+        <string>Revista Española de Investigación en Educación</string>
+        <key>edicion</key>
+        <string>9(2),</string>
+        <key>paginas</key>
+        <string>65-87.</string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string></string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_10</key>
+    <dict>
+        <key>tipo</key>
+        <string>Revista</string>
+        <key>autor</key>
+        <string>Ferrándiz, C., Prieto, M. D., Ballester, P. y Bermejo, M.R.</string>
+        <key>aPublicacion</key>
+        <string>(2004).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Validez y fiabilidad de los instrumentos de evaluación de las inteligencias múltiples en los primeros niveles instruccionales.</string>
+        <key>tituloMayor</key>
+        <string>Psicothema</string>
+        <key>edicion</key>
+        <string>16(1),</string>
+        <key>paginas</key>
+        <string>7-13.</string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string></string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_11</key>
+    <dict>
+        <key>tipo</key>
+        <string>Revista Electronica</string>
+        <key>autor</key>
+        <string>Cañedo Andalia, R. &amp; Small Chapman, M. C.</string>
+        <key>aPublicacion</key>
+        <string>(2011).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Elementos sobre indización y búsqueda de la información por medio de vocabularios controlados en bases de datos biomédicas.</string>
+        <key>tituloMayor</key>
+        <string>Acimed</string>
+        <key>edicion</key>
+        <string>22(2),</string>
+        <key>paginas</key>
+        <string>142-154.</string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string>http://search.ebscohost.com/login.aspx?direct=true&amp;db=fua&amp;AN =71425872&amp;site=ehost-live</string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_12</key>
+    <dict>
+        <key>tipo</key>
+        <string>Articulo Internet</string>
+        <key>autor</key>
+        <string>Nielsen, M. E.</string>
+        <key>aPublicacion</key>
+        <string>(s.f.).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Notable people in psychology of religion.</string>
+        <key>tituloMayor</key>
+        <string></string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string></string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string>http://www.psywww.com/psyrelig/psyrelpr.html</string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_13</key>
+    <dict>
+        <key>tipo</key>
+        <string>Articulo Periodico</string>
+        <key>autor</key>
+        <string>Urrutia, U.</string>
+        <key>aPublicacion</key>
+        <string>(2013, 20 de junio).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Aprende a citar un artículo de periódico impreso con Saber Es Práctico.com.</string>
+        <key>tituloMayor</key>
+        <string>SepNews</string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string>pp. 11-13.</string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string></string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_14</key>
+    <dict>
+        <key>tipo</key>
+        <string>Video</string>
+        <key>autor</key>
+        <string>semjeg.</string>
+        <key>aPublicacion</key>
+        <string>(1 de noviembre de 2016).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>La casa de Bernarda Alba - Teatro Rodante Universitario 2016[Archivo de video]</string>
+        <key>tituloMayor</key>
+        <string></string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string></string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string>https://www.youtube.com/watch?v=-0wiFXLZvh0</string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_15</key>
+        <dict>
+        <key>tipo</key>
+        <string>Pagina Web</string>
+        <key>autor</key>
+        <string>Celdrán, J.</string>
+        <key>aPublicacion</key>
+        <string>(29 de octubre de 2017).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Cómo referenciar una página web en APA.</string>
+        <key>tituloMayor</key>
+        <string></string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string></string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string>Recuperado de: https://www.saberespractico.com/apa/como-citar-una-pagina-web-en-apa/</string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+        <key>r_16</key>
+        <dict>
+        <key>tipo</key>
+        <string>Red Social</string>
+        <key>autor</key>
+        <string>Obama, B. [@BarackObama].</string>
+        <key>aPublicacion</key>
+        <string>(12 de Enro de 2016).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>Real opportunity requires every American to get the education and training they need to land a good-paying job.</string>
+        <key>tituloMayor</key>
+        <string></string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string></string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string>Twitter. https://twitter.com/BarackObama/status/687098814243549185</string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+    <key>r_17</key>
+    <dict>
+        <key>tipo</key>
+        <string>Red Social</string>
+        <key>autor</key>
+        <string>NASA [@nasa].</string>
+        <key>aPublicacion</key>
+        <string>(10 de abril de 2019).</string>
+        <key>fechaConsulta</key>
+        <string></string>
+        <key>titulo</key>
+        <string>In a historic feat by the Event Horizon Telescope and National Science Foundation (@NSFgov), an image of a black hole [Imagen adjunta].</string>
+        <key>tituloMayor</key>
+        <string></string>
+        <key>edicion</key>
+        <string></string>
+        <key>paginas</key>
+        <string></string>
+        <key>ciudadPais</key>
+        <string></string>
+        <key>editorial</key>
+        <string></string>
+        <key>url</key>
+        <string>Instagram. https://www.instagram.com/p/BwFQEn0j7v1/</string>
+        <key>editores</key>
+        <string></string>
+    </dict>
+</dict>
+</plist>
