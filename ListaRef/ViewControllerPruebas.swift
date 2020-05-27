@@ -49,9 +49,9 @@ class ViewControllerPruebas: UIViewController {
         lbPregunta.numberOfLines = 5
         lbDatos.adjustsFontSizeToFitWidth = true
         lbDatos.numberOfLines = 5
-        view4Options.isHidden = true
-        viewTrueFalse.isHidden = true
-        collectionV.isHidden = true
+        //view4Options.isHidden = true
+        //viewTrueFalse.isHidden = true
+        //collectionV.isHidden = false
         if(isOrdena){
             iniOrd()
         } else{
@@ -128,6 +128,7 @@ class ViewControllerPruebas: UIViewController {
         collectionV.dragInteractionEnabled = true
         collectionV.dragDelegate = self
         collectionV.dropDelegate = self
+        collectionV.reloadData()
     }
     
     // botones de identificar elemento
