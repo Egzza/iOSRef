@@ -19,6 +19,7 @@
 		DF8C70622450C79800AF298F /* ViewControllerQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C70612450C79800AF298F /* ViewControllerQuiz.swift */; };
 		DF8C70642450C7A800AF298F /* ViewControllerPruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C70632450C7A800AF298F /* ViewControllerPruebas.swift */; };
 		DF8C70662450C7B200AF298F /* ViewControllerGuia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C70652450C7B200AF298F /* ViewControllerGuia.swift */; };
+		DFEF5495247DD28300B70864 /* ref.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFEF5494247DD28300B70864 /* ref.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DF8C70612450C79800AF298F /* ViewControllerQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQuiz.swift; sourceTree = "<group>"; };
 		DF8C70632450C7A800AF298F /* ViewControllerPruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPruebas.swift; sourceTree = "<group>"; };
 		DF8C70652450C7B200AF298F /* ViewControllerGuia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGuia.swift; sourceTree = "<group>"; };
+		DFEF5494247DD28300B70864 /* ref.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ref.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				DF8C70652450C7B200AF298F /* ViewControllerGuia.swift */,
 				46E1B03824510C98009C95A6 /* Referencia.swift */,
 				DF8C70562450B97400AF298F /* Assets.xcassets */,
+				DFEF5494247DD28300B70864 /* ref.plist */,
 				DF8C70582450B97400AF298F /* LaunchScreen.storyboard */,
 				DF8C705B2450B97400AF298F /* Info.plist */,
 			);
@@ -143,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEF5495247DD28300B70864 /* ref.plist in Resources */,
 				DF8C705A2450B97400AF298F /* LaunchScreen.storyboard in Resources */,
 				DF8C70572450B97400AF298F /* Assets.xcassets in Resources */,
 				DF8C70552450B97200AF298F /* Main.storyboard in Resources */,
