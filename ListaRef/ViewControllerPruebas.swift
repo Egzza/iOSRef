@@ -260,15 +260,17 @@ extension ViewControllerPruebas: UICollectionViewDataSource, UICollectionViewDel
 extension ViewControllerPruebas : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-            return UIEdgeInsets(top: 40, left: 15, bottom: 40, right: 15)
+            return UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewWidth = collectionView.bounds.width
         var customCollectionWidth: CGFloat!
-        customCollectionWidth = collectionViewWidth/3 - 10
-        return CGSize(width: customCollectionWidth, height: customCollectionWidth)
+        customCollectionWidth = collectionViewWidth/1 - 10
+        var customCollectionHeight: CGFloat!
+        customCollectionHeight = collectionView.bounds.height/CGFloat(ord.unsolved.count) - 10
+        return CGSize(width: customCollectionWidth, height: customCollectionHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -276,7 +278,7 @@ extension ViewControllerPruebas : UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 5.0
     }
 }
 
