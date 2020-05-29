@@ -42,7 +42,7 @@
 		<key>tituloMayor</key>
 		<string></string>
 		<key>edicion</key>
-		<string>(2a ed.).</string>
+		<string>(2a ed.)</string>
 		<key>paginas</key>
 		<string></string>
 		<key>ciudadPais</key>
@@ -68,7 +68,7 @@
 		<key>tituloMayor</key>
 		<string></string>
 		<key>edicion</key>
-		<string></string>
+		<string>(1a ed).</string>
 		<key>paginas</key>
 		<string></string>
 		<key>ciudadPais</key>
@@ -388,7 +388,7 @@
 		<key>editorial</key>
 		<string></string>
 		<key>url</key>
-		<string>Recuperado de: https://www.saberespractico.com/apa/como-citar-una-pagina-web-en-apa/</string>
+		<string>https://www.saberespractico.com/apa/como-citar-una-pagina-web-en-apa/</string>
 		<key>editores</key>
 		<string></string>
 	</dict>

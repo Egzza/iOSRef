@@ -52,13 +52,13 @@ class Referencia: Codable{
                elementos = [autor, aPublicacion,titulo, edicion, ciudadPais, editorial]
                
              case "Libro Electronico":
-               partes = ["Autor", "Titulo", "Año De Publicacion", "Url"]
-               elementos = [autor, titulo, aPublicacion, url]
+               partes = ["Autor", "Año De Publicacion", "Titulo", "Url"]
+               elementos = [autor, aPublicacion, titulo, url]
                
                
              case "Capitulo Libro":
-               partes = ["Autor", "Año De Publicacion","Titulo", "Titulo Mayor", "Paginas", "Ciudad/Pais", "Editorial", "Editores"]
-               elementos = [autor, aPublicacion,  titulo, tituloMayor, paginas, ciudadPais, editorial, editores]
+               partes = ["Autor", "Año De Publicacion", "Titulo", "Editores", "Titulo Mayor", "Paginas", "Ciudad/Pais", "Editorial"]
+               elementos = [autor, aPublicacion,  titulo, editores, tituloMayor, paginas, ciudadPais, editorial]
                
            case "Revista":
                partes = ["Autor", "Año De Publicacion", "Titulo", "Titulo Mayor", "Edicion", "Paginas"]
@@ -73,10 +73,9 @@ class Referencia: Codable{
                elementos = [autor, aPublicacion, titulo, url]
                
            case "Articulo Periodico":
-               partes = ["Autor", "Titulo", "Año De Publicacion", "Titulo Mayor", "Paginas"]
-               elementos = [autor, titulo, aPublicacion, tituloMayor, paginas]
+               partes = ["Autor", "Año De Publicacion", "Titulo",  "Titulo Mayor", "Paginas"]
+               elementos = [autor, aPublicacion, titulo, tituloMayor, paginas]
            
-               
            case "Video":
                partes = ["Autor", "Año De Publicacion", "Titulo", "Url"]
                elementos = [autor, aPublicacion, titulo, url]
@@ -93,7 +92,7 @@ class Referencia: Codable{
              default:
                partes = []
                elementos = []
-           }
+        }
     }
 
   func printReferencia() -> String{
