@@ -5,6 +5,7 @@
 //  Created by Rogelio Martinez on 5/12/20.
 //  Copyright © 2020 Eugenio González. All rights reserved.
 //
+// clase para crear una pregunta de tipo identifica elemento
 
 import UIKit
 
@@ -18,6 +19,7 @@ class IdentificaElemento: NSObject {
       self.ref = ref
     }
     
+    // se crea la pregunta 
     func creaPregunta() -> String{
       var pregunta = "¿Que elemento de la ficha es este? "
         let random = Int.random(in: 0..<ref.partes.count)

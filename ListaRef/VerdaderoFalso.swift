@@ -5,6 +5,7 @@
 //  Created by Rogelio Martinez on 5/24/20.
 //  Copyright © 2020 Eugenio González. All rights reserved.
 //
+//  Clase para crear el tipo de pregunta, verdadero o falso
 
 import UIKit
 
@@ -16,7 +17,8 @@ class VerdaderoFalso: NSObject {
     init(ref: Referencia){
       self.ref = ref
     }
-
+    
+    // se crea la pregunta 
     func creaPregunta() -> String{
       var pregunta = ""
       let random = Int.random(in: 0..<ref.partes.count)

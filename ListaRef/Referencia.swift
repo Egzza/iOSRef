@@ -5,6 +5,7 @@
 //  Created by Rogelio Martinez on 4/22/20.
 //  Copyright © 2020 Eugenio González. All rights reserved.
 //
+//  Clase objeto de tipo referencia
 
 import UIKit
 
@@ -45,6 +46,7 @@ class Referencia: Codable{
 
   }
     
+    // Se crean los elementos de la referencia
     func crearElementos(){
         switch tipo {
              case "Libro":
@@ -95,13 +97,14 @@ class Referencia: Codable{
         }
     }
 
+    // se imprime la referencia dependiendo del tipo
   func printReferencia() -> String{
     switch self.tipo {
       case "Libro":
         let referencia = autor + " " + aPublicacion + " " + titulo + " " +  ciudadPais + " " + editorial;
         return referencia;
     case "Libro Electronico":
-        let referencia = autor + " " + aPublicacion + " " + titulo + " Recuperado de: " + url +  "."
+        let referencia = autor + " " + aPublicacion + " " + titulo + " " + url +  "."
         return referencia;
     case "Capitulo Libro":
         let referencia = autor + " " + aPublicacion + ", " + titulo + "En " +  editores + " " + tituloMayor + " " + paginas + ". " + ciudadPais + ": " + editorial;

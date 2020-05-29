@@ -171,8 +171,10 @@ class ViewControllerQuiz: UIViewController {
         refList.shuffle()
         refList[0].crearElementos()
         ord = Ordena(elementos: refList[0].elementos)
+        let numP = preguntasTotales - preguntas
+        let snumP = String(numP) + ". "
         lbPregunta.text = "Ordena"
-        lbDatos.text = "Ordena correctamente los datos de la referencia"
+        lbDatos.text = snumP + "Ordena correctamente los datos de la referencia"
         collectionV.dragInteractionEnabled = true
         collectionV.dragDelegate = self
         collectionV.dropDelegate = self
@@ -191,8 +193,10 @@ class ViewControllerQuiz: UIViewController {
         var listaDeRef = [refList[0].printReferencia(),refList[1].printReferencia(),refList[2].printReferencia(),refList[3].printReferencia()]
         listaDeRef.sort()
         ord = Ordena(elementos: listaDeRef)
+        let numP = preguntasTotales - preguntas
+        let snumP = String(numP) + ". "
         lbPregunta.text = "Acomoda"
-        lbDatos.text = "Acomoda alfabeticamente las referencias"
+        lbDatos.text = snumP + "Acomoda alfabeticamente las referencias"
         collectionV.dragInteractionEnabled = true
         collectionV.dragDelegate = self
         collectionV.dropDelegate = self

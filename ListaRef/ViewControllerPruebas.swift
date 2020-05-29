@@ -77,6 +77,7 @@ class ViewControllerPruebas: UIViewController {
         return url!
     }
     
+    // se selecciona al azar el tipo de pregunta
     func ini(){
         let valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
         if valor == 0{
