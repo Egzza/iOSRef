@@ -124,10 +124,14 @@ class ViewControllerQuiz: UIViewController {
         btnOpt2.setTitle(iE.op[1], for: .normal)
         btnOpt3.setTitle(iE.op[2], for: .normal)
         btnOpt4.setTitle(iE.op[3], for: .normal)
-        btnOpt1.backgroundColor = UIColor.gray
-        btnOpt2.backgroundColor = UIColor.gray
-        btnOpt3.backgroundColor = UIColor.gray
-        btnOpt4.backgroundColor = UIColor.gray
+        btnOpt1.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        btnOpt2.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        btnOpt3.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        btnOpt4.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        btnOpt1.layer.borderWidth = 0
+        btnOpt2.layer.borderWidth = 0
+        btnOpt3.layer.borderWidth = 0
+        btnOpt4.layer.borderWidth = 0
     }
     
     //funcion para inicializar verdadero o falso
@@ -153,8 +157,10 @@ class ViewControllerQuiz: UIViewController {
         btnTrue.setTitle("Verdadero", for: .normal)
         btnFalse.setTitle("Falso", for: .normal)
         
-        btnTrue.backgroundColor = UIColor.gray
-        btnFalse.backgroundColor = UIColor.gray
+        btnTrue.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        btnFalse.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        btnTrue.layer.borderWidth = 0
+        btnFalse.layer.borderWidth = 0
     }
     
     func iniOrd(){
@@ -199,10 +205,10 @@ class ViewControllerQuiz: UIViewController {
           respuesta = buttonTitle
         }
         btnListo4O.isEnabled = true
-        btnOpt1.backgroundColor = UIColor.green
-        btnOpt2.backgroundColor = UIColor.gray
-        btnOpt3.backgroundColor = UIColor.gray
-        btnOpt4.backgroundColor = UIColor.gray
+        btnOpt1.layer.borderWidth = 5
+        btnOpt2.layer.borderWidth = 0
+        btnOpt3.layer.borderWidth = 0
+        btnOpt4.layer.borderWidth = 0
     }
     
     @IBAction func btnOpt2(_ sender: UIButton) {
@@ -210,21 +216,20 @@ class ViewControllerQuiz: UIViewController {
           respuesta = buttonTitle
         }
         btnListo4O.isEnabled = true
-        btnOpt1.backgroundColor = UIColor.gray
-        btnOpt2.backgroundColor = UIColor.green
-        btnOpt3.backgroundColor = UIColor.gray
-        btnOpt4.backgroundColor = UIColor.gray
+        btnOpt1.layer.borderWidth = 0
+        btnOpt2.layer.borderWidth = 5
+        btnOpt3.layer.borderWidth = 0
+        btnOpt4.layer.borderWidth = 0
     }
     
     @IBAction func btnOpt3(_ sender: UIButton) {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
-        btnListo4O.isEnabled = true
-        btnOpt1.backgroundColor = UIColor.gray
-        btnOpt2.backgroundColor = UIColor.gray
-        btnOpt3.backgroundColor = UIColor.green
-        btnOpt4.backgroundColor = UIColor.gray
+        btnOpt1.layer.borderWidth = 0
+        btnOpt2.layer.borderWidth = 0
+        btnOpt3.layer.borderWidth = 5
+        btnOpt4.layer.borderWidth = 0
     }
     
     @IBAction func btnOpt4(_ sender: UIButton) {
@@ -232,10 +237,10 @@ class ViewControllerQuiz: UIViewController {
           respuesta = buttonTitle
         }
         btnListo4O.isEnabled = true
-        btnOpt1.backgroundColor = UIColor.gray
-        btnOpt2.backgroundColor = UIColor.gray
-        btnOpt3.backgroundColor = UIColor.gray
-        btnOpt4.backgroundColor = UIColor.green
+        btnOpt1.layer.borderWidth = 0
+        btnOpt2.layer.borderWidth = 0
+        btnOpt3.layer.borderWidth = 0
+        btnOpt4.layer.borderWidth = 5
     }
     
     @IBAction func btnListo4O(_ sender: UIButton) {
@@ -264,8 +269,8 @@ class ViewControllerQuiz: UIViewController {
           respuesta = buttonTitle
         }
         btnListoTF.isEnabled = true
-        btnTrue.backgroundColor = UIColor.green
-        btnFalse.backgroundColor = UIColor.gray
+        btnTrue.layer.borderWidth = 5
+        btnFalse.layer.borderWidth = 0
     }
     
     @IBAction func btnFalse(_ sender: UIButton) {
@@ -273,8 +278,8 @@ class ViewControllerQuiz: UIViewController {
           respuesta = buttonTitle
         }
         btnListoTF.isEnabled = true
-        btnTrue.backgroundColor = UIColor.gray
-        btnFalse.backgroundColor = UIColor.green
+        btnTrue.layer.borderWidth = 0
+        btnFalse.layer.borderWidth = 5
     }
     
     @IBAction func btnListoTF(_ sender: UIButton) {
@@ -362,6 +367,7 @@ extension ViewControllerQuiz: UICollectionViewDataSource, UICollectionViewDelega
         cell.myLabel.numberOfLines = 0
         cell.myLabel.text = ord.unsolved[indexPath.item]
         cell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        cell.layer.borderWidth = 0
         return cell
     }
     
