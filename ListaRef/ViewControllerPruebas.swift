@@ -271,7 +271,11 @@ class ViewControllerPruebas: UIViewController {
             let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alerta.addAction(accion)
             present(alerta, animated: true, completion: nil)
-            iniOrd()
+            if (isOrdena){
+                iniOrd()
+            }else{
+                iniAcom()
+            }
         }else{
             let alerta = UIAlertController(title: "Incorrecto", message: "Algo aun no esta bien", preferredStyle: .alert)
             let accion = UIAlertAction(title: "Intentar de Nuevo", style: .cancel, handler: nil)
@@ -313,7 +317,7 @@ extension ViewControllerPruebas: UICollectionViewDataSource, UICollectionViewDel
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OrdenaCollectionViewCell
         // Agrega el label
         cell.myLabel.adjustsFontSizeToFitWidth = true
-        cell.myLabel.numberOfLines = 2
+        cell.myLabel.numberOfLines = 0
         cell.myLabel.text = ord.unsolved[indexPath.item]
         cell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
         return cell

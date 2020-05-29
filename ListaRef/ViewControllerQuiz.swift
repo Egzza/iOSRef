@@ -54,7 +54,6 @@ class ViewControllerQuiz: UIViewController {
             print("error")
         }
         
-        
         view4Options.isHidden = true
         viewTF.isHidden = true
         lbPregunta.numberOfLines = 5

@@ -27,11 +27,14 @@ class ViewControllerEscogePreuba: UIViewController {
         let vista = segue.destination as! ViewControllerPruebas
         if(segue.identifier == "ordena"){
             vista.isOrdena = true
+            vista.isAcomoda = false
         } else if (segue.identifier == "acomoda") {
             vista.isAcomoda = true
+            vista.isOrdena = false
         }
         else{
             vista.isOrdena = false
+            vista.isAcomoda = false
         }
         
     }
