@@ -663,7 +663,7 @@
                                     <constraint firstItem="asd-dL-spS" firstAttribute="top" secondItem="IQy-Yu-iIA" secondAttribute="top" id="dfL-hy-BKk"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KqB-I5-zgk" userLabel="Ordena">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KqB-I5-zgk" userLabel="Ordena">
                                 <rect key="frame" x="19" y="202" width="341" height="380"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9qY-ms-3D2">
