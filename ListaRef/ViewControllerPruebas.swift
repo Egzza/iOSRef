@@ -43,6 +43,7 @@ class ViewControllerPruebas: UIViewController {
     
     var refList:[Referencia]!
     var isOrdena:Bool!
+    var isAcomoda:Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +62,9 @@ class ViewControllerPruebas: UIViewController {
         
         if(isOrdena){
             iniOrd()
-        } else{
+        } else if (isAcomoda){
+            iniAcom()
+        }else{
             ini()
         }
 
@@ -149,6 +152,25 @@ class ViewControllerPruebas: UIViewController {
         ord = Ordena(elementos: refList[0].elementos)
         lbPregunta.text = "Ordena"
         lbDatos.text = "Ordena correctamente los datos de la referencia"
+        collectionV.dragInteractionEnabled = true
+        collectionV.dragDelegate = self
+        collectionV.dropDelegate = self
+        collectionV.reloadData()
+    }
+    
+    func iniAcom(){
+        view4Options.isHidden = true
+        viewTrueFalse.isHidden = true
+        collectionV.isHidden = false
+        refList.shuffle()
+        for n in 0...3 {
+            refList[n].crearElementos()
+        }
+        var listaDeRef = [refList[0].printReferencia(),refList[1].printReferencia(),refList[2].printReferencia(),refList[3].printReferencia()]
+        listaDeRef.sort()
+        ord = Ordena(elementos: listaDeRef)
+        lbPregunta.text = "Acomoda"
+        lbDatos.text = "Acomoda alfabeticamente las referencias"
         collectionV.dragInteractionEnabled = true
         collectionV.dragDelegate = self
         collectionV.dropDelegate = self
