@@ -88,6 +88,7 @@ class ViewControllerPruebas: UIViewController {
     
     //fucion para inicializar identificar elemento
     func iniIE(){
+        btOk.isEnabled = false
         respuesta = ""
         view4Options.isHidden = false
         viewTrueFalse.isHidden = true
@@ -119,6 +120,7 @@ class ViewControllerPruebas: UIViewController {
     
     //funcion para inicializar verdadero o falso
     func iniVF(){
+        btnListoTF.isEnabled = false
         respuesta = ""
         view4Options.isHidden = true
         viewTrueFalse.isHidden = false
@@ -182,6 +184,7 @@ class ViewControllerPruebas: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btOk.isEnabled = true
         
         btOp1.layer.borderWidth = 5
         btOp2.layer.borderWidth = 0
@@ -193,6 +196,7 @@ class ViewControllerPruebas: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btOk.isEnabled = true
         btOp1.layer.borderWidth = 0
         btOp2.layer.borderWidth = 5
         btOp3.layer.borderWidth = 0
@@ -204,6 +208,7 @@ class ViewControllerPruebas: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btOk.isEnabled = true
         btOp1.layer.borderWidth = 0
         btOp2.layer.borderWidth = 0
         btOp3.layer.borderWidth = 5
@@ -214,6 +219,7 @@ class ViewControllerPruebas: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btOk.isEnabled = true
         btOp1.layer.borderWidth = 0
         btOp2.layer.borderWidth = 0
         btOp3.layer.borderWidth = 0
@@ -225,6 +231,7 @@ class ViewControllerPruebas: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btnListoTF.isEnabled = true
         btnTrue.layer.borderWidth = 5
         btnFalse.layer.borderWidth = 0
     }
@@ -233,6 +240,7 @@ class ViewControllerPruebas: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btnListoTF.isEnabled = true
         btnTrue.layer.borderWidth = 0
         btnFalse.layer.borderWidth = 5
     }
