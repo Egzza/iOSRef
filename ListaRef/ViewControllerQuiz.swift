@@ -82,6 +82,8 @@ class ViewControllerQuiz: UIViewController {
             lbDatos.text = "Puntuacion: " + String(puntuacion) + "/" + String(preguntasTotales)
             view4Options.isHidden = true
             viewTF.isHidden = true
+            viewOrdAcom.isHidden = true
+            collectionV.isHidden = true
             return
         }
         preguntas -= 1
@@ -105,6 +107,7 @@ class ViewControllerQuiz: UIViewController {
         viewTF.isHidden = true
         viewOrdAcom.isHidden = true
         collectionV.isHidden = true
+        btnListo4O.isEnabled = false
         
         refList.shuffle()
         refList[0].crearElementos()
@@ -134,6 +137,7 @@ class ViewControllerQuiz: UIViewController {
         viewTF.isHidden = false
         viewOrdAcom.isHidden = true
         collectionV.isHidden = true
+        btnListoTF.isEnabled = false
         
         refList.shuffle()
         refList[0].crearElementos()
@@ -194,6 +198,7 @@ class ViewControllerQuiz: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btnListo4O.isEnabled = true
         btnOpt1.backgroundColor = UIColor.green
         btnOpt2.backgroundColor = UIColor.gray
         btnOpt3.backgroundColor = UIColor.gray
@@ -204,6 +209,7 @@ class ViewControllerQuiz: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btnListo4O.isEnabled = true
         btnOpt1.backgroundColor = UIColor.gray
         btnOpt2.backgroundColor = UIColor.green
         btnOpt3.backgroundColor = UIColor.gray
@@ -214,6 +220,7 @@ class ViewControllerQuiz: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btnListo4O.isEnabled = true
         btnOpt1.backgroundColor = UIColor.gray
         btnOpt2.backgroundColor = UIColor.gray
         btnOpt3.backgroundColor = UIColor.green
@@ -224,6 +231,7 @@ class ViewControllerQuiz: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btnListo4O.isEnabled = true
         btnOpt1.backgroundColor = UIColor.gray
         btnOpt2.backgroundColor = UIColor.gray
         btnOpt3.backgroundColor = UIColor.gray
@@ -255,6 +263,7 @@ class ViewControllerQuiz: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btnListoTF.isEnabled = true
         btnTrue.backgroundColor = UIColor.green
         btnFalse.backgroundColor = UIColor.gray
     }
@@ -263,6 +272,7 @@ class ViewControllerQuiz: UIViewController {
         if let buttonTitle = sender.title(for: .normal) {
           respuesta = buttonTitle
         }
+        btnListoTF.isEnabled = true
         btnTrue.backgroundColor = UIColor.gray
         btnFalse.backgroundColor = UIColor.green
     }
