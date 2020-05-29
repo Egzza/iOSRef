@@ -314,9 +314,9 @@ class ViewControllerQuiz: UIViewController {
             puntuacion += 1
             ini()
          }else{
-            var correcta = ""
+           var correcta = "\n"
             for s in ord.solved {
-                correcta += s + " "
+                correcta += s + " \n\n"
             }
             let alerta = UIAlertController(title: "Incorrecto", message: "Respuesta Correcta " + correcta, preferredStyle: .alert)
              let accion = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
