@@ -36,10 +36,11 @@ class ViewControllerQuiz: UIViewController {
     @IBOutlet weak var btnFalse: UIButton!
     @IBOutlet weak var btnListoTF: UIButton!
     
-    //OrderList
-    @IBOutlet weak var viewOrderList: UIView!
-    @IBOutlet weak var tvList: UITableView!
-    @IBOutlet weak var btnListoOL: UIButton!
+    //Ordena
+    @IBOutlet weak var viewOrdAcom: UIView!
+    
+    @IBOutlet weak var collectionV: UICollectionView!
+    var ord:Ordena!
     
     var refList:[Referencia]!
     
@@ -84,11 +85,15 @@ class ViewControllerQuiz: UIViewController {
             return
         }
         preguntas -= 1
-        let valor = Int.random(in: 0...1) // seleccionar al azar el tipo de pregunta
+        let valor = Int.random(in: 0...3) // seleccionar al azar el tipo de pregunta
         if valor == 0{
             iniVF()
-        }else {
+        }else if valor == 1{
             iniIE()
+        }else if valor == 2{
+            iniOrd()
+        }else if valor == 3{
+            iniAcom()
         }
         
     }
@@ -98,6 +103,8 @@ class ViewControllerQuiz: UIViewController {
         respuesta = ""
         view4Options.isHidden = false
         viewTF.isHidden = true
+        viewOrdAcom.isHidden = true
+        collectionV.isHidden = true
         
         refList.shuffle()
         refList[0].crearElementos()
@@ -125,6 +132,8 @@ class ViewControllerQuiz: UIViewController {
         respuesta = ""
         view4Options.isHidden = true
         viewTF.isHidden = false
+        viewOrdAcom.isHidden = true
+        collectionV.isHidden = true
         
         refList.shuffle()
         refList[0].crearElementos()
@@ -143,6 +152,43 @@ class ViewControllerQuiz: UIViewController {
         btnTrue.backgroundColor = UIColor.gray
         btnFalse.backgroundColor = UIColor.gray
     }
+    
+    func iniOrd(){
+        view4Options.isHidden = true
+        viewTF.isHidden = true
+        collectionV.isHidden = false
+        viewOrdAcom.isHidden = false
+        refList.shuffle()
+        refList[0].crearElementos()
+        ord = Ordena(elementos: refList[0].elementos)
+        lbPregunta.text = "Ordena"
+        lbDatos.text = "Ordena correctamente los datos de la referencia"
+        collectionV.dragInteractionEnabled = true
+        collectionV.dragDelegate = self
+        collectionV.dropDelegate = self
+        collectionV.reloadData()
+    }
+    
+    func iniAcom(){
+        view4Options.isHidden = true
+        viewTF.isHidden = true
+        collectionV.isHidden = false
+        viewOrdAcom.isHidden = false
+        refList.shuffle()
+        for n in 0...3 {
+            refList[n].crearElementos()
+        }
+        var listaDeRef = [refList[0].printReferencia(),refList[1].printReferencia(),refList[2].printReferencia(),refList[3].printReferencia()]
+        listaDeRef.sort()
+        ord = Ordena(elementos: listaDeRef)
+        lbPregunta.text = "Acomoda"
+        lbDatos.text = "Acomoda alfabeticamente las referencias"
+        collectionV.dragInteractionEnabled = true
+        collectionV.dragDelegate = self
+        collectionV.dropDelegate = self
+        collectionV.reloadData()
+    }
+    
     
     @IBAction func btnOpt1(_ sender: UIButton) {
         if let buttonTitle = sender.title(for: .normal) {
@@ -249,6 +295,26 @@ class ViewControllerQuiz: UIViewController {
       }
     }
     
+    @IBAction func ChecarOrdena(_ sender: Any) {
+        if (ord.unsolved == ord.solved){
+             let alerta = UIAlertController(title: "Correcto", message: "Respuesta Correcta", preferredStyle: .alert)
+             let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+             alerta.addAction(accion)
+             present(alerta, animated: true, completion: nil)
+            puntuacion += 1
+            ini()
+         }else{
+            var correcta = ""
+            for s in ord.solved {
+                correcta += s + " "
+            }
+            let alerta = UIAlertController(title: "Incorrecto", message: "Respuesta Correcta " + correcta, preferredStyle: .alert)
+             let accion = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+             alerta.addAction(accion)
+             present(alerta, animated: true, completion: nil)
+            ini()
+         }
+    }
     
     
     /*
@@ -261,4 +327,116 @@ class ViewControllerQuiz: UIViewController {
     }
     */
 
+}
+
+
+// MARK:- Ordena
+extension ViewControllerQuiz: UICollectionViewDataSource, UICollectionViewDelegate{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //Agarrar la lista length
+        if ord != nil{
+            return ord.unsolved.count
+        } else {
+            return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OrdenaCollectionViewCell
+        // Agrega el label
+        cell.myLabel.adjustsFontSizeToFitWidth = true
+        cell.myLabel.numberOfLines = 0
+        cell.myLabel.text = ord.unsolved[indexPath.item]
+        cell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        return cell
+    }
+    
+}
+
+
+extension ViewControllerQuiz : UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = collectionView.bounds.width
+        var customCollectionWidth: CGFloat!
+        customCollectionWidth = collectionViewWidth/1 - 10
+        var customCollectionHeight: CGFloat!
+        customCollectionHeight = collectionView.bounds.height/CGFloat(ord.unsolved.count) - 10
+        return CGSize(width: customCollectionWidth, height: customCollectionHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5.0
+    }
+}
+
+extension ViewControllerQuiz: UICollectionViewDragDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let item = self.ord.unsolved[indexPath.item] // Poner el string al que le dio click para hacer drag
+        let itemProvider = NSItemProvider(object: item as NSString)
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        dragItem.localObject = dragItem
+        //collectionView.cellForItem(at: indexPath)?.layer.borderWidth = 5
+        return [dragItem]
+    }
+}
+
+extension ViewControllerQuiz: UICollectionViewDropDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+        
+        if collectionView.hasActiveDrag {
+            return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+        }
+        return UICollectionViewDropProposal(operation: .forbidden)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+        
+        //collectionView.cellForItem(at: (coordinator.items.first?.sourceIndexPath)!)?.layer.borderWidth = 0
+        
+        //collectionView.cellForItem(at: (coordinator.destinationIndexPath)!)?.layer.borderWidth = 0
+        
+        var destinationIndexPath: IndexPath
+        if let indexPath = coordinator.destinationIndexPath {
+            destinationIndexPath = indexPath
+        } else {
+            let row = collectionView.numberOfItems(inSection: 0)
+            destinationIndexPath = IndexPath(item: row - 1, section: 0)
+        }
+        
+        if coordinator.proposal.operation == .move {
+            self.reorderItems(coordinator: coordinator, destinationIndexPath: destinationIndexPath, collectionView: collectionView)
+            collectionView.reloadData()
+        }
+    }
+    
+    fileprivate func reorderItems(coordinator: UICollectionViewDropCoordinator, destinationIndexPath:IndexPath, collectionView: UICollectionView) {
+        
+        if let item = coordinator.items.first,
+            let sourceIndexPath = item.sourceIndexPath {
+            
+            collectionView.performBatchUpdates({
+                ord.unsolved.swapAt(sourceIndexPath.item, destinationIndexPath.item)
+                collectionView.reloadItems(at: [sourceIndexPath,destinationIndexPath])
+                
+            }, completion: nil)
+            
+            coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
+        }
+    }
 }
