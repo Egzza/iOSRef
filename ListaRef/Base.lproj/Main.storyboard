@@ -18,7 +18,7 @@
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8m-Hi-khH">
                                 <rect key="frame" x="122" y="269" width="130" height="40"/>
-                                <color key="backgroundColor" red="0.75824414959999997" green="1" blue="0.62478308599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.75686274509803919" green="1" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="S8m-Hi-khH" secondAttribute="height" multiplier="13:4" id="ei2-sz-zAa"/>
                                 </constraints>
@@ -96,19 +96,32 @@
                                     <constraint firstItem="Fyg-WC-xc7" firstAttribute="leading" secondItem="uoR-ny-mhk" secondAttribute="leading" constant="24" id="wbT-yr-JPP"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2E-J0-a9z">
+                                <rect key="frame" x="165" y="575" width="45" height="26"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                <state key="normal" title="Creditos">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="f0U-3l-4yB" kind="show" id="2Jx-E7-EBe"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.21406632526220826" green="0.72592320889267992" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.21568627450980393" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2rA-PN-Fmy" secondAttribute="trailing" constant="123" id="1Xe-Np-uFI"/>
                             <constraint firstItem="pw4-bx-LGl" firstAttribute="top" secondItem="2rA-PN-Fmy" secondAttribute="bottom" constant="41" id="9GI-wv-CaA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B2E-J0-a9z" secondAttribute="trailing" constant="165" id="AAK-XC-068"/>
                             <constraint firstItem="pw4-bx-LGl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="CMd-NB-luf"/>
                             <constraint firstItem="pw4-bx-LGl" firstAttribute="top" secondItem="2rA-PN-Fmy" secondAttribute="bottom" constant="41" id="HXK-VC-p8L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B2E-J0-a9z" secondAttribute="bottom" constant="22" id="OQr-v3-NhM"/>
                             <constraint firstItem="2rA-PN-Fmy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="Qcr-L5-16J"/>
                             <constraint firstItem="uoR-ny-mhk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-20.5" id="R9n-Es-dEy"/>
                             <constraint firstItem="S8m-Hi-khH" firstAttribute="top" secondItem="uoR-ny-mhk" secondAttribute="bottom" constant="19.5" id="Rm6-L2-QXI"/>
                             <constraint firstItem="S8m-Hi-khH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="TCE-Mt-GRD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S8m-Hi-khH" secondAttribute="trailing" constant="123" id="dEC-cS-GN5"/>
                             <constraint firstItem="uoR-ny-mhk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="geB-Lv-w4P"/>
+                            <constraint firstItem="B2E-J0-a9z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="mbe-3C-43R"/>
                             <constraint firstItem="uoR-ny-mhk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qcq-tc-XAm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pw4-bx-LGl" secondAttribute="trailing" constant="123" id="uXL-c5-89d"/>
                             <constraint firstItem="2rA-PN-Fmy" firstAttribute="top" secondItem="S8m-Hi-khH" secondAttribute="bottom" constant="37" id="wad-xj-Ti2"/>
@@ -317,7 +330,7 @@
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VwD-v1-aUy">
                                         <rect key="frame" x="20" y="20" width="130" height="83"/>
-                                        <color key="backgroundColor" red="0.89728558059999997" green="0.53242039679999997" blue="0.4562200904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.53333333333333333" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Opción 1">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -333,7 +346,7 @@
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="L2S-4N-S8T">
                                         <rect key="frame" x="191" y="20" width="130" height="83"/>
-                                        <color key="backgroundColor" red="0.89805954690000001" green="0.74835348130000001" blue="0.45502382520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.74901960784313726" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Opción 2">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -349,7 +362,7 @@
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="RYb-C2-hIt">
                                         <rect key="frame" x="20" y="136" width="130" height="83"/>
-                                        <color key="backgroundColor" red="0.57057625059999995" green="0.89669305089999995" blue="0.45284146069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.56862745098039214" green="0.89803921568627454" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Opción 2">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -365,7 +378,7 @@
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lLw-bo-V5j">
                                         <rect key="frame" x="191" y="136" width="130" height="83"/>
-                                        <color key="backgroundColor" red="0.81334680319999997" green="0.45573365690000001" blue="0.89967852829999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.81176470588235294" green="0.45490196078431372" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Opción 4">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -465,6 +478,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dme-iY-7jH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2380" y="-883.80809595202402"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="r83-1A-aAE">
+            <objects>
+                <viewController id="f0U-3l-4yB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1if-H5-47Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cug-7y-ZLN">
+                                <rect key="frame" x="16" y="49" width="343" height="378"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">
+Lista de Referencias fue desarrollado como proyecto final de la materia Proyecto de Desarrollo para dispositivos móviles en el semestre Febrero Junio 2020.
+
+Desarrolladores:
+- Eugenio González Arteaga
+- Patricio Andres Saldivar Flores 
+- Rogelio Martínez Martínez
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1707211733" green="0.72030055520000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="dwk-gA-5hT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="d86-O3-jo8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwU-bC-ge1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5999999999999" y="1040.3298350824589"/>
         </scene>
         <!--Guía-->
         <scene sceneID="IlQ-uw-BJZ">

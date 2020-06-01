@@ -42,6 +42,16 @@ class ViewControllerQuiz: UIViewController {
     @IBOutlet weak var collectionV: UICollectionView!
     var ord:Ordena!
     
+    var ordCol = [UIColor(red: 0.90, green: 0.53, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.90, green: 0.75, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.57, green: 0.90, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.81, green: 0.45, blue: 0.90, alpha: 1.00),
+                  UIColor(red: 0.90, green: 0.53, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.90, green: 0.75, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.57, green: 0.90, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.81, green: 0.45, blue: 0.90, alpha: 1.00)]
+    
+    
     var refList:[Referencia]!
     
     override func viewDidLoad() {
@@ -372,6 +382,7 @@ extension ViewControllerQuiz: UICollectionViewDataSource, UICollectionViewDelega
         cell.myLabel.text = ord.unsolved[indexPath.item]
         cell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
         cell.layer.borderWidth = 0
+        cell.layer.backgroundColor = ordCol[indexPath.item].cgColor
         return cell
     }
     

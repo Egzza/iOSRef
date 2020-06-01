@@ -38,6 +38,15 @@ class ViewControllerPruebas: UIViewController {
     @IBOutlet weak var btnListoOL: UIButton!
     var ord:Ordena!
     
+    var ordCol = [UIColor(red: 0.90, green: 0.53, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.90, green: 0.75, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.57, green: 0.90, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.81, green: 0.45, blue: 0.90, alpha: 1.00),
+                  UIColor(red: 0.90, green: 0.53, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.90, green: 0.75, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.57, green: 0.90, blue: 0.45, alpha: 1.00),
+                  UIColor(red: 0.81, green: 0.45, blue: 0.90, alpha: 1.00)]
+    
     
     @IBOutlet weak var collectionV: UICollectionView!
     
@@ -329,6 +338,7 @@ extension ViewControllerPruebas: UICollectionViewDataSource, UICollectionViewDel
         cell.myLabel.numberOfLines = 3
         cell.myLabel.text = ord.unsolved[indexPath.item]
         cell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        cell.layer.backgroundColor = ordCol[indexPath.item].cgColor
         return cell
     }
     
